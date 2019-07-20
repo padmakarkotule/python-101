@@ -12,8 +12,6 @@ Identifiers. In python Identifiers must obey the following rules.
 -Identifier can’t be a keyword (keywords are reserved words that Python uses for special
 purpose).Following are Keywords in python 3.
 
-
-
 Data types: classification On different parameters
 [1]
 Atomic      :Boolean, Integer ,Float, String
@@ -92,75 +90,6 @@ print(round(i, 2))
 
 print("------------------")
 
-
-for c in s6:  # String is an iterable
-    print(c)
-
-# Range Function
-
-l1 = [1, 2, 3]
-# for loop version 1
-for i in l1:
-    print(i)
-
-# for loop version 2
-for i in range(len(l1)):
-    print(l1[1])
-
-# Diff Between for loop v1 and v2
-
-# for loop version 1
-for i in l1:
-    i = i + 3
-print(l1)  # does not change
-
-# for loop version 2
-for i in range(len(l1)):
-    l1[i] = l1[i] + 3
-print(l1)  # Change
-
-# Break statement : to exit out of a loop when an external
-# condition is triggered.
-number = 0
-for number in range(10):
-    number = number + 1
-    if number == 5:
-        break  # break here
-    print('Number is ' + str(number))
-
-# continue: to skip over the part of a loop where an external
-# condition is triggered.
-
-number = 0
-for number in range(10):
-    number = number + 1
-    if number == 5:
-        continue  # continue here
-    print('Number is ' + str(number))
-
-# Pass : When an external condition is triggered, the pass
-# statement allows you to handle the condition without the
-# loop being impacted in any way.
-
-number = 0
-for number in range(10):
-    number = number + 1
-    if number == 5:
-        pass  # pass here
-    print('Number is ' + str(number))
-
-# The pass statement tells the program to disregard that
-# condition and continue to run the program as usual.
-
-# Slicing of String
-s = "This is Salman khan"
-""""
-+ve indexing start from 0
--ve indexing start from -1"""
-
-print(s[8:15])
-print(s[-11:-4])
-print(s[1:15:3])
 
 
 """
