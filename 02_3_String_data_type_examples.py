@@ -59,10 +59,9 @@ print("Example - short cut of string slice e.g. [:3], shows start from 0,  - ", 
 print("Example - short cut of string slice e.g. [2:], shows start from 2 and then take till end,  - ", s[2:])
 print("Example - short cut of getting entire string e.g. [:] - ", s[:])
 print("Multiple e.g., s[-10:-3], s[-1], s[1:8]", s[-10:-3], s[-1], s[1:8])
+print('-' * 80)
 #
-
-
-s = "This is Salman khan"
-#print("This is example of -", s[8:15])
-#print("This is example of -", s[-11:-4])
-#print("This is example of -", s[1:15:3])
+print("\tExample of reverse string")
+s = "Hello,World"
+print("Example of reverse string \"Hello,World\" - ",s[::-1])
+print('-' * 80)
