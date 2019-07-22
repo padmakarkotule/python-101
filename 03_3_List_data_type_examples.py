@@ -142,3 +142,14 @@ print("Before using pop (remove last value) from list \n", L)
 L.pop()
 print("After using pop, - ", L)
 print('-' * 80)
+
+# example of reverse method in list
+print("\tExample of reverse list")
+L = [10,20,30,40,50,60,70]
+print("Before reverse list", L)
+L.reverse()
+print("After reverse list", L)
+L = [10,20,30,40,50,60,70]
+print("Before reverse list", L)
+print("Using index method - ", L[::-1])
+print('-' * 80)
