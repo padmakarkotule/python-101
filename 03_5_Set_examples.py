@@ -1,5 +1,7 @@
 """
 Examples of data type Set.
+Note: Set doesn't support indexing.
+
 """
 print('-' * 80)
 # Example of data type Set
