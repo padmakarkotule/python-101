@@ -3,7 +3,7 @@ import json
 
 # Code start here
 
-yaml_filename = "02_yml_repeat_code_example_single_doc.yaml"
+yaml_filename = "yaml_single_doc.yaml"
 with open(yaml_filename) as file:
     data = yaml.load(file, Loader=yaml.FullLoader)
 
