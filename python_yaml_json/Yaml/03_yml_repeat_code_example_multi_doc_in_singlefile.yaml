@@ -1,0 +1,67 @@
+# Yaml avoid repeat code example using multi yaml document in single file.
+
+# yamllint - package can be used to check YAML file syntax error.
+# E.g. yamllint repeat_code_example.yaml
+
+# Yaml version. Versions are -
+# - PyYAML      # YAML 1.1, pure python and libyaml binding
+# - ruamel.yaml # YAML 1.2, update of PyYAML with round-tripping of comments
+# - PySyck      # YAML 1.0, syck binding
+%YAML 1.2
+
+# YAML Document start with ---
+---
+
+# Yaml example to avoid write repeated code.
+# Use Anchor (&) and  alias (*)
+# YAML Anchors and aliases.
+# let you identify an item with an anchor in a YAML document, and then
+# refer to that item with an alias later in the same document. Anchors are
+# identified by an & character, and aliases by an * character.
+# Example,
+defaults: &defaults
+  adapter: postgres
+  host: localhost
+
+development:
+  datanase: myapp_development
+  <<: *defaults
+
+test:
+   database: myapp_test
+   <<: *defaults
+...
+
+#%YAML 1.2
+---
+components:
+  schemas:
+    200: &components_schemas_200
+      title: Successful response
+      type: object
+
+properties:
+        coord:
+          *components_schemas_200
+        setup:
+          <<: *components_schemas_200
+
+#
+# title: test
+# choices: &C
+#   a: one
+#   b: two
+#   c: three
+# ---
+# title: test 2
+# choices: *C
+
+# above code is not a document, these are two YAML documents in one file.
+# The anchor definition &C doesn't carry from one YAML document to another,
+# it can only be used up until the document separator ---
+
+# Using Python convert the YAML to JSON format and check the output.
+# Output will come in list object. Output will show JSON e.g.
+
+# YANL Document end with ...
+...
