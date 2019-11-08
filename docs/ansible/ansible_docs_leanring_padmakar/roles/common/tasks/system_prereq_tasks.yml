@@ -1,0 +1,16 @@
+# System Prereq task - E.g. Check os_family, os distribution, memory, cpu, available disk space etc.
+# Include common variable file.
+- include_vars: "roles/common/vars/main.yml"
+
+# Prereq TASK
+# System_verify_tasks  - Create temp directories when distribution is CentOS
+- block:
+    - name: "Prereq TASK: Create {{ temp_dir }}  - dir "
+      file: path="{{ temp_dir }}" state=directory mode=0700 owner=ansible group=ansible
+      tags: prereq_task
+
+    - name: "Prereq TASK: Create  {{ logs_dir }}  - dir "
+      file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+      tags: prereq_task
+  #when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "CentOS"

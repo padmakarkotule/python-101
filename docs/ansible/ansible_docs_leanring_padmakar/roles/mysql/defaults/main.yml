@@ -1,0 +1,5 @@
+---
+# Include default variable files.
+httpd_listen_port: 80
+httpd_log_level: warn
+

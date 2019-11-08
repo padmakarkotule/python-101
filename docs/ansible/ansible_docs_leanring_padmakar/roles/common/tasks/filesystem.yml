@@ -1,0 +1,20 @@
+# Filesystem task
+
+
+# Prereq TASKS
+- block:
+    - name: "Filesystem  TASK: Create {{ temp_dir }}  - dir "
+      file: path="{{ temp_dir }}" state=directory mode=0700 owner=ansible group=ansible
+      tags: prereq
+
+    - name: "Filesystem TASK: Create  {{ logs_dir }}  - dir "
+      file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+      tags: prereq
+  #when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "CentOS"
+
+
+# Installation/Configuration Tasks
+
+
+# Post configuration Tasks

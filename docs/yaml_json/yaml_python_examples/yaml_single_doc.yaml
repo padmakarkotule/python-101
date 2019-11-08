@@ -1,0 +1,35 @@
+# YAML load file and convert to json example.
+
+# yamllint - package can be used to check YAML file syntax error.
+# E.g. yamllint repeat_code_example.yaml
+
+# Yaml version. Versions are -
+# - PyYAML      # YAML 1.1, pure python and libyaml binding
+# - ruamel.yaml # YAML 1.2, update of PyYAML with round-tripping of comments
+# - PySyck      # YAML 1.0, syck binding
+%YAML 1.2
+
+# YANL Document start with ---
+---
+
+# Yaml example to avoid write repeated code.
+# Use Anchor (&) and  alias (*)
+# YAML Anchors and aliases.
+# let you identify an item with an anchor in a YAML document, and then
+# refer to that item with an alias later in the same document. Anchors are
+# identified by an & character, and aliases by an * character.
+# Example,
+defaults: &defaults
+  adapter: postgres
+  host: localhost
+
+development:
+  datanase: myapp_development
+  <<: *defaults
+
+test:
+   database: myapp_test
+   <<: *defaults
+
+# YANL Document end with ...
+...

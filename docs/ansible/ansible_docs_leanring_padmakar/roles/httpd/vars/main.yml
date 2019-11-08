@@ -1,0 +1,3 @@
+---
+# vars file for roles/httpd
+# Note: All common internal variable should be define in common role under vars/main.yml

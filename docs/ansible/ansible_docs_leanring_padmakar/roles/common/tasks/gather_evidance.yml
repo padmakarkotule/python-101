@@ -1,0 +1,38 @@
+# System Post task - E.g. Check os_family, os distribution, memory, cpu, available disk space etc.
+
+# Include common variable file.
+- include_vars: "roles/common/vars/main.yml"
+
+# Post TASK
+# System_verify_TASKS, e.g. Gather evidance, delete temp directories when distribution is CentOS
+- block:
+  - name: "_Post TASK: test1 - List dir {{ temp_dir }}  - dir "
+    #shell: /usr/bin/uptime
+    command: "ls -al"
+    register: result_ls
+    tags: post_task
+
+  - name: httpd
+    yum: name=httpd state=latest
+    register: result_httpd
+
+#    - debug:
+#        var: result
+#        verbosity: 1
+
+# Gather Evidance
+- block:
+    - name: "Post TASK: Gather Evidance "
+      become: False
+      local_action: 
+        module: shell 
+        #_raw_params: echo  "__INFO__{{ ansible_hostname }}__":" "`/bin/date`" - Output of "result_ls" command  - {{ result_ls.stdout}}" >>gather_evidance/gather_evidance.log
+       # _raw_params: echo  "__INFO__{{ ansible_hostname }}__":" "`/bin/date`" - Output of "result_httpd" command  - {{ result_httpd}}" >>gather_evidance/gather_evidance.log
+        _raw_params: |
+          echo "\n__INFO__{{ ansible_hostname }}__":" "`/bin/date`" - Output of "result_ls" command  -
+          {{ result_ls.stdout}}" >>gather_evidance/gather_evidance.log
+          
+      #shell: echo  "INFO":" "`/bin/date`" - Output of "result_ls" command  - {{ result_ls.stdout}}" >>gather_evidance.log
+      #delegate_to: 127.0.0.1
+      tags: post_task
+

@@ -1,0 +1,5 @@
+---
+# Common Tasks
+# Note: We can include task files in this main.yml e.g.
+#- include: "roles/common/tasks/system_prereq.yml"
+#- include: "roles/common/tasks/system_post.yml"

@@ -1,0 +1,23 @@
+---
+# vars file for roles/common
+# Note: We can define variables in other file e.g. internal_var.yml and include here e.g.
+# include_vars: "internal_vars.yml"
+
+# Internal variables
+# temp_dir: "/tmp/gsl/artifacts/<application_name>/installers" E.g.
+temp_dir: "/tmp/gsl/"
+
+# Exapnd area - used to copy installer files E.g.
+# expand_area: "/tmp/gsl/artifacts/<application_name>/installers"
+expand_area: "/tmp/gsl/artifacts/httpd/installers"
+
+# Archive name E.g. archive_name: "appname_<version>.ext"
+archive_name: "httpd_v1.0.tar"
+
+# Repo path - used to stroe all software and download during installation.
+# E.g. repo_path: "http://reposerver/binaries/<windows or linux>/<application>/<version>/"
+repo_path: "http://reposerver/binaries/<windows or linux>/<application>/<version>/"
+
+#  Logs dir - Note, keep application specific logs. General logs dir can be configured in ansible.cfg
+# E.g. logs_dir: "/var/log/gsl/<application>/<app_name>.log"
+logs_dir: "/var/log/gsl/httpd/"

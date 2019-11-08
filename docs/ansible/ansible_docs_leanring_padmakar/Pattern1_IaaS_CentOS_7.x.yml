@@ -1,0 +1,31 @@
+---
+- hosts: linuxhost
+
+  pre_tasks:
+    - name: Executing System prereq 
+      include: "roles/common/tasks/system_prereq_tasks.yml"
+
+    - name: Executing Filesystem task.
+      include: "roles/common/tasks/filesystem.yml"
+      # This is example of include complete role
+      # include_role: 
+      #   name: common
+      tags: prereq_tasks
+      # Use following when statement to check skipped/failed result.
+      #when: ansible_distribution == "CentiOS" 
+      when: ansible_distribution == "CentOS" 
+
+
+  roles:
+    - role: httpd
+      # Use following when statement to check skipped/failed result.
+      # when: ansible_facts['os_family'] == 'Debian'
+      when: ansible_facts['os_family'] == 'RedHat'
+
+
+  post_tasks:
+    # This is example of to include particular task. Note in particular task you must include varible file e.g. vars/main.yml file.
+    - name: Executing post task.
+      include: "roles/common/tasks/system_post_tasks.yml"
+      tags: "post_tasks"
+

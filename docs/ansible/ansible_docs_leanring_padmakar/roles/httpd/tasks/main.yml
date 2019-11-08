@@ -1,0 +1,54 @@
+---
+# tasks file for roles/httpd
+# There are two optons, we can write task in separate file and include it in this file using include keyword. 
+# Example, create task in prereq.yml, install.yml, cleanup.yml, gather_evidence.yml and include all four files
+#  using include keyword e.g.
+# - include: "roles/httpd/tasks/install.yml"
+# Or write task in this file only and provide tag for each task. 
+# **Note: Use block for each group of task.**
+# E.g. Tags you can define as prereq, install, cleanup, gather_evidence etc.
+
+# Prereq taska  - tags prereq_task
+# Install/Config task - tags install
+# Post task - tags post_task
+# Note: Keep prereq, install, post task related to this role only and not common task such as create temp folder.
+#       Common task will be included in common role such as createing temp folder, cleanup temp folder, log dir etc.
+
+# Prereq Tasks
+# This block used for all prereq task of role httpd.
+
+# **Note:** Do not add any system verification or system pre task here. That task should be in common task. 
+# Also do not add any OS_family, os_distribution conditional statement. It should in  main playbook file.
+# E.g. Pattern1.yml will have "When" conditional statement to execute this role.
+
+- block:
+    - name: "Httpd TASK: Prereq task"
+      command: echo "Executing httpd task"
+      tags: httpd_prereq
+
+    #- name: Copy httpd.conf file in /etc
+    #  copy: src="" des= {{ }}
+    #  tags: prereq
+
+
+# Installation/Configuration Task
+# This block used for all installation related task of role httpd.
+- block:
+    - name: "Httpd TASK: Installation and configuration tasks"
+      yum: name=httpd state=latest
+      tags: httpd_install
+
+    - name: "Httpd TASK: Start httpd"
+      systemd:
+        state: started
+        name: apachectl
+      ignore_errors: True
+      tags: httpd_install
+
+# Post Task
+# This block used for all post task of role httpd.
+- block:
+    - name: "Httpd TASK: Gather Evidence"
+      shell: echo " Gather evidence "
+      register: httpd_result
+

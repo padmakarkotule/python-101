@@ -1,0 +1,4 @@
+{
+  "ansible_sudo_pass":ansible123,
+  "mysql_install_dir":"/opt/httpd_in_exta_var",
+}

@@ -1,0 +1,13 @@
+site_name: Automation - Docs
+nav:
+    - Home: automation_readme.md
+    - Roles:
+          - 'httpd': 'roles/httpd.md'
+    - Contact: about_gslab.md
+    - Bug Tracker: https://gslab.com/gslab_jira.md
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust

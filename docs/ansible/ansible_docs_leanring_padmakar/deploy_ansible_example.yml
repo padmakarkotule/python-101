@@ -1,0 +1,48 @@
+---
+- hosts: linuxhost
+  become: True
+  become_method: sudo
+  remote_user: ansible
+  become_user: root
+  #become_ask_pass: False
+
+  #pre_tasks:
+   # - name: Executing System prereq 
+    #  include: "roles/common/tasks/system_prereq_tasks.yml"
+
+    #- name: Executing Filesystem task.
+     # include: "roles/common/tasks/filesystem.yml"
+      # This is example of include complete role
+      # include_role: 
+      #   name: common
+       #tags: prereq_tasks
+      # Use following when statement to check skipped/failed result.
+      #when: ansible_distribution == "CentiOS" 
+      #when: ansible_distribution == "CentOS" 
+
+
+  #roles:
+   # - role: httpd
+      # Use following when statement to check skipped/failed result.
+      # when: ansible_facts['os_family'] == 'Debian'
+    #  when: ansible_facts['os_family'] == 'RedHat'
+    #- role: mysql
+      # Use following when statement to check skipped/failed result.
+      #when: ansible_distribution == "Ubuntu" 
+      #when: ansible_distribution == "RedHat" 
+     # when: ansible_distribution == "CentOS" 
+
+
+  post_tasks:
+    # This is example of to include particular task. Note in particular task you must include varible file e.g. vars/main.yml file.
+    - name: Executing post task.
+      include: "roles/common/tasks/gather_evidance.yml"
+      tags: "post_tasks"
+
+#become_plugins     = /usr/share/ansible/plugins/become
+# https://docs.ansible.com/ansible/become.html#becoming-an-unprivileged-user
+# If 'true' unparsed inventory sources become fatal errors, they are warnings otherwise.
+#become=True
+#become_method=sudo
+#become_user=root
+#become_ask_pass=False
