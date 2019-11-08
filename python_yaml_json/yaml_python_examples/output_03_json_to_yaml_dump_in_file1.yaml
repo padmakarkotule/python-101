@@ -1,3 +1,0 @@
-{defaults: {adapter: postgres, host: localhost}, development: {adapter: postgres,
-    datanase: myapp_development, host: localhost}, test: {adapter: postgres, database: myapp_test,
-    host: localhost}}
