@@ -1,6 +1,6 @@
 ![alt text][logo]
 [logo]:/img/logo.jpg
-# GS Lab - IDM Cloud Automation
+# Ansible best practices and template - By Padmakar
 GSLab IDM Cloud Automation Services provide an orchestration and automation platform
 with enterprise-ready IaaS and PaaS services to provision VM and 
 installation of tools/components. 
@@ -16,11 +16,11 @@ For full documentation of ansible please visit ansible site-
   
 #### Version - 0.1
   
-[TermsOfService:](http://gslab.com/terms)
+[TermsOfService:](http://cbcom/terms)
 
 #### Contact:
 
-**IDM Clould automation team** - [Website]("http://gslab.com/contact") [Email](mailto:componentowner@gslab.com)
+**IDM Clould automation team** - [Website]("http://abc.com/contact") [Email](mailto:componentowner@abc.com)
  
 
 #### License:
