@@ -1,8 +1,162 @@
 # Concept before starting/using Celery.
-## 
- 
-Ref. https://www.distributedpython.com/2018/10/26/celery-execution-pool/
+
+##### Difference between Multiprogramming, multitasking, multithreading and multiprocessing
+1. Multiprogramming – A computer running more than one program at a time (like running 
+   Excel and Firefox simultaneously).
+2. Multiprocessing – A computer using more than one CPU at a time.
+3. Multitasking – Tasks sharing a common resource (like 1 CPU).
+4. Multithreading is an extension of multitasking.
+Ref. Link - 
+https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/
+
+
+## Multiprocessing: 
+Ref. Link - https://www.geeksforgeeks.org/difference-between-multiprocessing-and-multithreading/
+Multiprocessing is a system that has more than one or two processors. In Multiprocessing, 
+CPUs are added for increasing computing speed of the system. Because of Multiprocessing, 
+There are many processes are executed simultaneously. Multiprocessing are classified 
+into two categories:
+
+1. Symmetric Multiprocessing
+2. Asymmetric Multiprocessing 
+
+Ref. Link - https://www.geeksforgeeks.org/difference-between-asymmetric-and-symmetric-multiprocessing/
+- Symmetric Multiprocessing
+    It involves a multiprocessor computer hardware and software architecture where two or more 
+    identical processors are connected to a single, shared main memory, have full access to 
+    all input and output devices, In other words, Symmetric Multiprocessing is a type of 
+    multiprocessing where each processor is self-scheduling.
+    For example, SMP applies multiple processors to that one problem, known as parallel programming.
+- Asymmetric Multiprocessing
+    Asymmetric Multiprocessing system is a multiprocessor computer system where not all of the 
+    multiple interconnected central processing units (CPUs) are treated equally. In asymmetric 
+    multiprocessing, only a master processor runs the tasks of the operating system.
+    For example, AMP can be used in assigning specific tasks to CPU based on priority and 
+    importance of task completion.
+
+## Multithreading:
+Multithreading is a system in which multiple threads are created of a process for increasing 
+the computing speed of the system. In multithreading, many threads of a process are executed 
+simultaneously and process creation in multithreading is done according to economical.   
+
+**Difference between Multiprocessing and Multithreading:**
+
+|S.NO  |	Multiprocessing |	Multithreading|
+|-----:|-------------------:|----------------:|
+1. | 	In Multiprocessing, CPUs are added for increasing computing power. |	While In Multithreading, many threads are created of a single process for increasing computing power.
+2. | 	In Multiprocessing, Many processes are executed simultaneously. |	While in multithreading, many threads of a process are executed simultaneously.
+3. |	Multiprocessing are classified into Symmetric and Asymmetric. 	| While Multithreading is not classified in any categories.
+4. |	In Multiprocessing, Process creation is a time-consuming process. |	While in Multithreading, process creation is according to economical.
+
+**Three requirements for multiprocessing**
+Before you can begin multiprocessing, you need to pick which sections of code to 
+multiprocess. These sections of code must meet the following criteria:
+1. Must not be reliant on previous outcomes
+2. Does not need to be executed in a particular order
+3. Does not return anything that would need to be accessed later in the code
+
+Ref. Link
+https://medium.com/@urban_institute/using-multiprocessing-to-make-python-code-faster-23ea5ef996ba
+https://www.blog.pythonlibrary.org/2016/08/02/python-201-a-multiprocessing-tutorial/
+
+**Examples**
+
+#### Program without multiprocessing
+#from multiprocessing import Pool
+
+    import time 
+    def basic_func(x):
+        if x == 0:
+            return 'zero'
+        elif x % 2 == 0:
+            return 'even'
+        else:
+            return 'odd'    
+    starttime = time.time()
+    for i in range(0, 10):
+        y = i * i
+        time.sleep(2)
+        print('{} squared results in a/an {} number'.format(i, basic_func(y)))    
+    print('That took {} seconds'.format(time.time() - starttime))
+
+#### Program with multiprocessing 
+
+    import time
+    import multiprocessing
+    def basic_func(x):
+        if x == 0:
+            return 'zero'
+        elif x % 2 == 0:
+            return 'even'
+        else:
+            return 'odd'        
+    def multiprocessing_func(x):
+        y = x * x
+        time.sleep(2)
+        print('{} squared results in a/an {} number'.format(x, basic_func(y)))
+    if __name__ == '__main__':
+        starttime = time.time()
+        processes = []
+        for i in range(0, 10):
+            p = multiprocessing.Process(target=multiprocessing_func, args=(i,))
+            processes.append(p)
+            p.start()  
+        for process in processes:
+            process.join()    
+        print('That took {} seconds'.format(time.time() - starttime))
+
+**Tip**
+
+    **Unless you are running a machine with more than 10 processors, the Process code 
+    should run faster than the Pool code.** Process sends code to a processor as soon 
+    as the process is started. Pool sends a code to each available processor and 
+    doesn’t send any more until a processor has finished computing the first section 
+    of code. Pool does this so that processes don’t have to compete for computing 
+    resources, but this makes it slower than Process in cases where each process 
+    is lengthy. For an example where Pool is faster than Process, remove the line 
+    time.sleep(2) in multiprocessing_func in both the Process and Pool codes.    
+    
+    The multiprocessed code doesn’t execute in the same order as serial execution. 
+    There’s no guarantee that the first process to be created will be the first to 
+    start or complete. As a result, multiprocessed code usually executes in a 
+    different order each time it is run, even if each result is always the same.
+
+##### Coroutine in Python
+Ref. Link -https://www.geeksforgeeks.org/coroutine-in-python/
+**Prerequisite : Generators**
+We all are familiar with function which is also known as a subroutine, procedure, subprocess etc. 
+A function is a sequence of instructions packed as a unit to perform a certain task. *When 
+the logic of a complex function is divided into several self-contained steps that are themselves 
+functions, then these functions are called helper functions or subroutines.*
+
+Subroutines in Python are called by main function which is responsible for coordination the 
+use of these subroutines. Subroutines have single entry point.
+
+The difference between coroutine and subroutine is :
+
+    - Unlike subroutines, coroutines have many entry points for suspending and resuming execution. 
+        Coroutine can suspend its execution and transfer control to other coroutine and can 
+        resume again execution from the point it left off. E.g. Generator (yeild)
+    - Unlike subroutines, there is no main function to call coroutines in particular order and 
+        coordinate the results. Coroutines are cooperative that means they link together to 
+        form a pipeline. One coroutine may consume input data and send it to other which 
+        process it. Finally there may be a coroutine to display result.
+
+In Python, coroutines are similar to generators but with few extra methods and slight change 
+in how we use yield statement. Generators produce data for iteration while coroutines can 
+also consume data. whatever value we send to coroutine is captured and returned by (yield) expression.
+
+    Few links for asyincio, concurrancy 
+    https://hackernoon.com/asyncio-for-the-working-python-developer-5c468e6e2e8e
+    http://sdiehl.github.io/gevent-tutorial/ 
+
+
+
+
+
 # Celery Execution Pools: What is it all about?
+Ref. https://www.distributedpython.com/2018/10/26/celery-execution-pool/
+
 An introduction to prefork, solo, eventlet and gevent 
 Have you ever asked yourself what happens when you start a Celery worker? Ok, 
 it might not have been on your mind. But you might have come across things 
