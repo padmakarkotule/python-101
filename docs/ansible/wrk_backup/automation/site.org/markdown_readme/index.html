@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Markdown Cheatsheet / Examples - Automation - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Markdown Cheatsheet / Examples";
+    var mkdocs_page_input_path = "markdown_readme.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Automation - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../automation_readme/">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Roles (Opensource Tools)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../roles/httpd_README/">Httpd</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../roles/mysql_README.md">Mysql</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Roles (File System)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../check_free_space.md">Check Free Space</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mount_filesystem_on_linux_and_windows.md">Mount Filesystem on linux and windows</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../create_volume_group.md">Create Volume Group</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../create_logical_volume.md">Create Logical Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../create_physical_volume.md">Create Physical volume</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Security (Linux)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../selinux.md">SeLinux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ssh.md">ssh_implementation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about_gslab/">Contact</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://gslab.com/gslab_jira.md">Bug Tracker</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Automation - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Markdown Cheatsheet / Examples</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="markdown-cheatsheet-examples">Markdown Cheatsheet / Examples</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Markdown is a text-to-HTML conversion 
+tool for web writers. 
+Quick reference and showcase to write Markdown page.
+For moew details pl. visit,</p>
+<p>Ref. Link -
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links</p>
+<pre><code>```
+"Github" 
+ - https://daringfireball.net/projects/markdown/
+"Basic writing and formatting syntax."
+ - https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+"Other Markdown tools:"
+ - https://github.com/adam-p/markdown-here/wiki/Other-Markdown-Tools
+
+```
+</code></pre>
+<h2 id="table-of-contents">Table of contents</h2>
+<ol>
+<li><a href="#Headers">Headers</a></li>
+<li><a href="#Emphasis">Emphasis</a><ol>
+<li><a href="#Ordered list">Ordered list</a></li>
+<li><a href="#Unordered list">Unordered list</a></li>
+</ol>
+</li>
+<li><a href="#Lists">Lists</a></li>
+<li><a href="#Links">Links</a></li>
+<li><a href="#Images">Images</a></li>
+<li><a href="#Code and Syntax Highlighting">Code and Syntax Highlighting</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Blockquotes">Blockquotes</a></li>
+<li><a href="#Inline HTML">Inline HTML</a></li>
+<li><a href="#Horizontal Rule">Horizontal Rule</a></li>
+<li><a href="#Line Breaks">Line Breaks</a></li>
+<li><a href="#YouTube Videos">YouTube Videos</a></li>
+<li><a href="#Some more Examples">Some more Examples</a></li>
+</ol>
+<h2 id="headers">Headers<a name="Headers"></a></h2>
+<p>This is test of H1.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<p>Alternatively, for H1 and H2, an underline-ish style:
+E.g.
+H1 using ==
+========
+and H2 using using ---</p>
+<hr />
+<p>Use === for H1 and use --- for H2.</p>
+<h2 id="emphasis">Emphasis <a name="Emphasis"></a></h2>
+<p>italics -  with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>bold -  with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined - emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough - uses two tildes ~~Scratch this~~</p>
+<h2 id="lists">Lists <a name="Lists"></a></h2>
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+<h1 id="_1"></h1>
+<h6 id="ordered-list">Ordered list <a name="Ordered list"></a></h6>
+<ol>
+<li>First ordered list item</li>
+<li>Another item </li>
+</ol>
+<h1 id="_2"></h1>
+<h6 id="unordered-list">Unordered list <a name="Unordered list"></a></h6>
+<ul>
+<li>Unordered sub-list.</li>
+</ul>
+<h1 id="_3"></h1>
+<ol>
+<li>Actual numbers don't matter, just that it's a number.</li>
+<li>Ordered sub-list.</li>
+<li>
+<p>And another item.</p>
+<p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+To have a line break without a paragraph, you will need to use two trailing spaces.
+Note that this line is separate, but within the same paragraph.
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+<h1 id="_4"></h1>
+<ul>
+<li>Unordered list can use asterisks</li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ul>
+<h1 id="_5"></h1>
+</li>
+</ol>
+<h2 id="links">Links <a name="Links"></a></h2>
+<p>There are two ways to create links.</p>
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></p>
+<p><a href="https://www.mozilla.org">I'm a reference-style link</a></p>
+<p><a href="../blob/master/LICENSE">I'm a relative reference to a repository file</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+<p>URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes 
+example.com (but not on Github, for example).</p>
+<p>Some text to show that the reference links can follow later.</p>
+<h2 id="images">Images <a name="Images"></a></h2>
+<p>Here's our logo (hover to see the title text):</p>
+<p>Inline-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" /></p>
+<p>Reference-style: 
+<img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" /></p>
+<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting <a name="Code and Syntax Highlighting"></a></h2>
+<p>Code blocks are part of the Markdown spec, but syntax highlighting 
+isn't. However, many renderers -- like Github's and Markdown 
+Here -- support syntax highlighting. Which languages are supported 
+and how those language names should be written will vary from renderer 
+to renderer. Markdown Here supports highlighting for dozens of 
+languages (and not-really-languages, like diffs and HTTP headers); 
+to see the complete list, and how to write the language names, see the 
+highlight.js demo page.</p>
+<pre><code>Inline `code` has `back-ticks around` it.
+</code></pre>
+<p>Blocks of code are either fenced by lines with three back-ticks ```, 
+or are indented with four spaces. I recommend only using the fenced 
+code blocks -- they're easier and only they support syntax 
+highlighting.</p>
+<pre><code class="javascript">var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+</code></pre>
+
+<pre><code class="python">s = &quot;Python syntax highlighting&quot;
+print s
+</code></pre>
+
+<pre><code>    No language indicated, so no syntax highlighting. 
+    But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+
+
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+
+s = &quot;Python syntax highlighting&quot;
+print s
+
+No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre>
+
+<h2 id="tables">Tables <a name="Tables"></a></h2>
+<p>Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown 
+Here supports them. They are an easy way of adding tables to your email -- a 
+task that would otherwise require copy-pasting from another application.</p>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Col 3 is the example of table in markdown.</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="blockquotes">Blockquotes <a name="Blockquotes"></a></h2>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text. 
+This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when 
+it wraps. Oh boy let's keep writing to make sure this is long 
+enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> 
+into a blockquote. </p>
+</blockquote>
+<h2 id="inline-html">Inline HTML <a name="Inline HTML"></a></h2>
+<p>You can also use raw HTML in your Markdown, and it'll mostly 
+work pretty well.
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd></p>
+<p><dt>Markdown in HTML</dt>
+  <dd>Does <em>not</em> work <strong>very</strong> well. Use HTML <em>tags</em>.</dd>
+</dl></p>
+<h2 id="horizontal-rule">Horizontal Rule <a name="Horizontal Rule"></a></h2>
+<p><strong>Three or more Hypenes, Asterisks or Underscores. E.g.</strong></p>
+<hr />
+<p>Hyphens</p>
+<hr />
+<p>Asterisks</p>
+<hr />
+<hr />
+<p>Underscores</p>
+<h2 id="line-breaks">Line Breaks <a name="Line Breaks"></a></h2>
+<p>My basic recommendation for learning how line breaks work is to 
+experiment and discover -- hit <Enter> once (i.e., insert one 
+newline), then hit it twice (i.e., insert two newlines), see 
+what happens. You'll soon learn to get what you want. 
+"Markdown Toggle" is your friend.</p>
+<p>Here are some things to try out:</p>
+<p>Here's a line for us to start with.</p>
+<p>This line is separated from the one above by two newlines, so it 
+will be a <em>separate paragraph</em>.</p>
+<p>This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a 
+separate line in the <em>same paragraph</em>.</p>
+<h2 id="youtube-videos">YouTube Videos <a name="YouTube Videos"></a></h2>
+<p>They can't be added directly but you can add an image with a 
+link to the video like this:</p>
+<p><a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+"target="_blank"> <img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="140" height="80" border="10" /></a></p>
+<p>Or, in pure Markdown, but losing the image sizing and border:
+<a href="http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img alt="IMAGE ALT TEXT HERE" src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" /></a></p>
+<p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1.</p>
+<h2 id="some-more-examples">Some more Examples <a name="Some more Examples"></a></h2>
+<h3 id="commands">Commands</h3>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs help</code> - Print this help message.</li>
+</ul>
+<h3 id="project-layout">Project layout</h3>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
+<h3 id="test-page">Test page</h3>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

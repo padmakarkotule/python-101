@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  become: yes
+  roles:
+    - /home/ansible/ansible/roles/httpd
+  vars:
+    mysql_install_dir: "/opt/httpd_in_Patternfile"

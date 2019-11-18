@@ -1,0 +1,16 @@
+- hosts: linuxhost
+  - gather_facts: False
+  - vars:
+    user: ansible
+    passw: ansible123
+  tasks:
+    - name: local scp — copy key file into authorized_keys
+      local_action: “command scp ~{{user}}/.ssh/id_rsa.pub ansible@linuxhost:~{{user}}/.ssh/authorized_keys”
+
+    - name: give required permission to .ssh for user
+      raw: chmod 0700 ../{{user}}/.ssh/
+      become: true
+
+    - name: give required permission to authorized_keys for user
+      raw: chmod 0600 ../{{user}}/.ssh/authorized_keys
+      become: true

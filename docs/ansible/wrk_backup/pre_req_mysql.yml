@@ -1,0 +1,27 @@
+---
+# Ansbile pre-req - Must copy authorized key (id_rsa.pub) on target host.
+# This play book used to confiure authorized key on remote server.
+# Note: On remote server remote user should present and it should be in sudoers list..
+- hosts: linuxhost
+  gather_facts: False
+  remote_user: test
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: Verify cpu, memory, diskspace, hostname
+      command: hostname
+
+    - name: Create directory for MySql Installtion
+      file: path=/opt/mysql/ state=directory mode=0755
+
+    - name: Verify path
+      command: ls -al /op/mysql
+
+    - shell: echo "The variable 'foo' is defined: '{{ foo }}'"
+      when: foo is defined
+
+    - fail: msg="The variable 'bar' is not defined"
+    - when: bar is undefined

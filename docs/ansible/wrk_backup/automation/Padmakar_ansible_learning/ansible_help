@@ -1,0 +1,317 @@
+####
+ansible@bec5c7bc713f:~/ansible$ ls -al
+total 96
+drwxr-xr-x 5 ansible ansible  4096 Nov  4 14:47 .
+drwxr-xr-x 6 ansible ansible  4096 Oct 29 10:24 ..
+-rw-r--r-- 1 ansible ansible   758 Nov  4 14:50 Pattern1_IaaS_RHEL7.x.yml
+-rw-r--r-- 1 ansible ansible   345 Nov  4 14:27 Pattern1_IaaS_RHEL7.x.yml.wrk
+-rw-r--r-- 1 ansible ansible   538 Nov  4 14:47 Pattern2_PaaS_RHEL7.x.yml
+-rw-r--r-- 1 ansible ansible 20293 Oct 29 10:03 ansible.cfg
+-rw-r--r-- 1 ansible ansible    86 Nov  4 14:28 extra_var.json
+-rw-r--r-- 1 ansible ansible   149 Nov  4 14:27 extra_var.json.wrk
+drwxr-xr-x 2 ansible ansible  4096 Oct 29 14:02 group_vars
+-rw-r--r-- 1 ansible ansible    68 Oct 29 10:03 hosts
+-rw-r--r-- 1 ansible ansible    68 Oct 31 10:20 inventory_hosts.development_env
+-rw-r--r-- 1 ansible ansible    68 Oct 31 10:19 inventory_hosts.production_env
+-rw-r--r-- 1 ansible ansible    68 Oct 31 10:19 inventory_hosts.staging_env
+drwxr-xr-x 2 ansible ansible  4096 Oct 29 10:04 logs
+drwxr-xr-x 5 ansible ansible  4096 Nov  4 14:47 roles
+-rw-r--r-- 1 ansible ansible 20480 Oct 29 10:31 roles.tar
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ cat inventory_hosts.development_env
+[webservers]
+linuxhost
+
+[dbservers]
+db0.example.com
+db1.example.com
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ cat Pattern1_IaaS_RHEL7.x.yml
+---
+- hosts: linuxhost
+
+    #  pre_tasks:
+    #    - name: Executing common and prereq tasks
+          # include: "roles/common/tasks/common_task.yml"
+          # This is example of include complete role
+    #      include_role:
+    #        name: common
+    #      tags: "prereq"
+
+  roles:
+    - httpd
+
+  pre_tasks:
+    - name: Executing common and prereq tasks
+      # include: "roles/common/tasks/common_task.yml"
+      # This is example of include complete role
+      include_role:
+        name: common
+      tags: "prereq"
+
+
+  post_tasks:
+    # This is example of to include particular task. Note in particular task you must include varible file e.g. vars/main.yml file.
+    - name: Executing post task.
+      include: "roles/common/tasks/cleanup.yml"
+      tags: "post_cleanup"
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ cat extra_var.json
+{
+  "ansible_sudo_pass":ansible123,
+  "mysql_install_dir":"/opt/httpd_in_exta_var",
+}
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ cat group_vars/all.yml
+# Variables listed here are applicable to all host groups
+
+dnsserver: 192.168.1.1
+ntpserver: 192.168.1.2
+repository: https://github.com/playbooks.git
+logs_dir: "/var/log/gsl/httpd"
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ ls -al logs/
+total 144
+drwxr-xr-x 2 ansible ansible   4096 Oct 29 10:04 .
+drwxr-xr-x 5 ansible ansible   4096 Nov  4 14:57 ..
+-rw-r--r-- 1 ansible ansible 133121 Nov  4 14:50 ansible.log
+ansible@bec5c7bc713f:~/ansible$
+
+####
+ansible@bec5c7bc713f:~/ansible$ ls -al roles
+total 20
+drwxr-xr-x  5 ansible ansible 4096 Nov  4 14:47 .
+drwxr-xr-x  5 ansible ansible 4096 Nov  4 14:57 ..
+drwxr-xr-x 10 ansible ansible 4096 Nov  4 11:51 common
+drwxr-xr-x 10 ansible ansible 4096 Oct 29 10:25 httpd
+drwxr-xr-x 10 ansible ansible 4096 Nov  4 14:47 mysql
+ansible@bec5c7bc713f:~/ansible$
+
+
+####
+ansible@bec5c7bc713f:~/ansible$ ls -al roles/common/
+total 44
+drwxr-xr-x 10 ansible ansible 4096 Nov  4 11:51 .
+drwxr-xr-x  5 ansible ansible 4096 Nov  4 14:47 ..
+-rw-r--r--  1 ansible ansible 1328 Oct 29 10:25 README.md
+drwxr-xr-x  2 ansible ansible 4096 Nov  4 07:56 defaults
+drwxr-xr-x  2 ansible ansible 4096 Oct 30 09:57 files
+drwxr-xr-x  2 ansible ansible 4096 Oct 29 10:25 handlers
+drwxr-xr-x  2 ansible ansible 4096 Oct 29 10:25 meta
+drwxr-xr-x  3 ansible ansible 4096 Nov  4 13:34 tasks
+drwxr-xr-x  2 ansible ansible 4096 Oct 29 10:25 templates
+drwxr-xr-x  2 ansible ansible 4096 Oct 29 10:25 tests
+drwxr-xr-x  3 ansible ansible 4096 Nov  4 14:04 vars
+ansible@bec5c7bc713f:~/ansible$
+
+######
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/vars/main.yml
+---
+# vars file for roles/httpd
+# include_vars: "internal_vars.yml"
+
+# Internal variables
+# temp_dir: "/tmp/gsl/artifacts/<application_name>/installers" E.g.
+temp_dir: "/tmp/gsl/"
+
+# Exapnd area - used to copy installaer files E.g.
+# expand_area: "/tmp/gsl/artifacts/<application_name>/installers"
+expand_area: "/tmp/gsl/artifacts/httpd/installers"
+
+# Archive name E.g. archive_name: "appname_<version>.ext"
+archive_name: "httpd_v1.0.tar"
+
+# Repo path - used to stroe all software and download during installation.
+# E.g. repo_path: "http://reposerver/binaries/<windows or linux>/<application>/<version>/"
+repo_path: "http://reposerver/binaries/<windows or linux>/<application>/<version>/"
+
+#  Logs dir - Note, keep application specific logs. General logs dir can be configured in ansible.cfg
+# E.g. logs_dir: "/var/log/gsl/<application>/<app_name>.log"
+logs_dir: "/var/log/gsl/httpd/"
+ansible@bec5c7bc713f:~/ansible$
+
+######
+ansible@bec5c7bc713f:~/ansible$ ls -al roles/common/tasks/
+total 24
+drwxr-xr-x  3 ansible ansible 4096 Nov  4 13:34 .
+drwxr-xr-x 10 ansible ansible 4096 Nov  4 11:51 ..
+-rw-r--r--  1 ansible ansible  305 Nov  4 14:31 cleanup.yml
+-rw-r--r--  1 ansible ansible  365 Nov  4 14:29 common_task.yml
+-rw-r--r--  1 ansible ansible  396 Nov  4 12:06 main.yml
+drwxr-xr-x  2 ansible ansible 4096 Nov  4 12:01 old
+ansible@bec5c7bc713f:~/ansible$
+
+######
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/common_task.yml
+# Prereq task
+
+#- name: Create "{{ temp_dir }}" dir
+#- include_vars: "roles/common/vars/main.yml"
+- name: Create " temp_dir " dir
+  file: path="{{ temp_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: prereq
+
+- name: Create "{{ logs_dir }}" dir
+  file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: prereq
+ansible@bec5c7bc713f:~/ansible$
+
+######
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/cleanup.yml
+# Post task
+- include_vars: "roles/common/vars/main.yml"
+- name: Cleanup "{{ temp_dir }}" dir
+  file: path="{{ temp_dir }}" state=absent
+  tags: post_cleanup
+
+- name: Create "{{ logs_dir }}" dir
+  file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: post_cleanup
+
+ansible@bec5c7bc713f:~/ansible$
+
+######
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/main.yml
+---
+# tasks file for roles/httpd
+#include: prereq.yml
+
+# Prereq task
+#pre_task:
+#  - name: Create Temp folder to copy installation and other temporary files.
+#    file: path="{{ tmp_dir }}" state=directory mode=0700
+#task:
+# - name: Create "{{ temp_dir }}" dir
+#  file: path="{{ temp_dir }}" state=directory mode=0700 owner=ansible group=ansible
+
+- include: "roles/common/tasks/common_task.yml"
+ansible@bec5c7bc713f:~/ansible$
+
+##### httpd (tasks) **roles/httpd/tasks/main.yml**
+ansible@bec5c7bc713f:~/ansible$ cat roles/httpd/tasks/main.yml
+---
+# tasks file for roles/httpd
+# There are two optons, we can write task in separate file and include it in this file using include keyword.
+# Example, create task in prereq.yml, install.yml, cleanup.yml, gather_evidence.yml and include all four files
+#  using include keyword e.g.
+# - include: "roles/httpd/tasks/install.yml"
+# Or write task in this file only and provide tag for each task.
+# E.g. Tags you can define as prereq, install, cleanup, gather_evidence etc.
+
+# Prereq taska  - tag prereq
+# Install/Config task - tag install
+# Post task - tag gatherevidence
+# Post task - tag cleanup
+# Note: Keep prereq, install, post task related to this role only and not common task such as create temp folder.
+#       Common task will be included in common role such as createing temp folder, cleanup temp folder, log dir etc.
+
+# Prereq Tasks
+- name: "Executing httpd task"
+  shell: echo "Executing httpd task"
+  tags: prereq
+
+#- name: Copy httpd.conf file in /etc
+#  copy: src="" des= {{ }}
+#  tags: prereq
+
+# Install Task
+- name: Install httpd
+  yum: name=httpd state=latest
+  tags: install
+
+#- name: Start httpd
+#  systemd:
+#    state: started
+#    name: apachectl
+#  tags: install
+
+#  Gather Evidence (post) Task
+- name: Gather Evidence
+  shell: echo " Gather evidence "
+  register: httpd_result
+ansible@bec5c7bc713f:~/ansible$
+
+#####
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/prereq.yml
+# Prereq task
+
+#- name: Create "{{ temp_dir }}" dir
+- include_vars: "roles/common/vars/main.yml"
+- name: "Prereq -- Create {{ temp_dir }}  - dir "
+  file: path="{{ temp_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: prereq
+
+- name: "Prereq -- Create  {{ logs_dir }}  - dir "
+  file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: prereq
+ansible@bec5c7bc713f:~/ansible$
+
+
+######
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/post_gatherEvidance.yml
+# Post task
+- include_vars: "roles/common/vars/main.yml"
+- name: "Post - Cleanup  {{ temp_dir }} - dir"
+  file: path="{{ temp_dir }}" state=absent
+  tags: post_cleanup
+
+- name: "Post - Create {{ logs_dir }} - dir"
+  file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: post_cleanup
+
+ansible@bec5c7bc713f:~/ansible$
+
+ansible@bec5c7bc713f:~/ansible$ cat roles/common/tasks/post_cleanup.yml
+# Post task
+- include_vars: "roles/common/vars/main.yml"
+- name: "Post -- Cleanup {{ temp_dir }} -  dir "
+  file: path="{{ temp_dir }}" state=absent
+  tags: post_cleanup
+
+- name: "Post -- Cleanup  {{ logs_dir }} - dir "
+  file: path="{{ logs_dir }}" state=directory mode=0700 owner=ansible group=ansible
+  tags: post_cleanup
+
+ansible@bec5c7bc713f:~/ansible$
+
+
+
+===============================
+Block -
+Blocks allow for logical grouping of tasks and in play error handling.
+Most of what you can apply to a single task (with the exception of loops) can be applied at the block level,
+which also makes it much easier to set data or directives common to the tasks. This does
+not mean the directive affects the block itself, but is
+inherited by the tasks enclosed by a block. i.e. a when will be applied to the tasks, not the block itself.
+
+
+========
+IMP
+
+Commands
+    # ansible linuxhost -m setup --tree result/facts  -e "@extra_var.json"
+    #
+
+Directory structure
+
+# Gather Evidanc
+- block:
+    - name: "Post TASK: Gather Evidance "
+      become: False
+      local_action:
+        module: shell
+        _raw_params: echo  "__INFO__{{ ansible_hostname }}__":" "`/bin/date`" - Output of "result_ls" command  - {{ result_ls.stdout}}" >>gather_evidance/gather_evidance.
+log
+      #shell: echo  "INFO":" "`/bin/date`" - Output of "result_ls" command  - {{ result_ls.stdout}}" >>gather_evidance.log
+      #delegate_to: 127.0.0.1
+      tags: post_task

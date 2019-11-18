@@ -1,0 +1,26 @@
+site_name: Automation - Docs
+nav:
+    - Home: automation_readme.md
+    - IBM Resiliency Orchestration: 'IBM_Resiliency_Orchestration.md'
+    - Roles (Opensource Tools):
+        - 'Httpd': 'roles/httpd_README.md'
+        - 'Mysql': 'roles/mysql_README.md'
+    - Roles (File System):
+        - 'Check Free Space': 'check_free_space.md'
+        - 'Mount Filesystem on linux and windows': 'mount_filesystem_on_linux_and_windows.md'
+        - 'Create Volume Group': 'create_volume_group.md'
+        - 'Create Logical Volume': 'create_logical_volume.md'
+        - 'Create Physical volume': 'create_physical_volume.md'
+    - Security (Linux):
+        - 'SeLinux': 'selinux.md'
+        - 'ssh_implementation': 'ssh.md'
+
+
+    - Contact: about_gslab.md
+    - Bug Tracker: https://gslab.com/gslab_jira.md
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust

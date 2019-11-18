@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Httpd - Automation - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Httpd";
+    var mkdocs_page_input_path = "roles\\httpd_README.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Automation - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../automation_readme/">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Roles (Opensource Tools)</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Httpd</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#role-httpd">Role - httpd</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#version-2441"> Version - 2.4.41</a></li>
+        
+            <li><a class="toctree-l4" href="#contact">Contact:</a></li>
+        
+            <li><a class="toctree-l4" href="#license">License:</a></li>
+        
+            <li><a class="toctree-l4" href="#servers">Servers:</a></li>
+        
+            <li><a class="toctree-l4" href="#security">Security:</a></li>
+        
+            <li><a class="toctree-l4" href="#tags">Tags:</a></li>
+        
+            <li><a class="toctree-l4" href="#externaldocs">ExternalDocs:</a></li>
+        
+            <li><a class="toctree-l4" href="#paths-and-variables">Paths and Variables</a></li>
+        
+            <li><a class="toctree-l4" href="#files-and-templates">Files and Templates</a></li>
+        
+            <li><a class="toctree-l4" href="#handlers">Handlers</a></li>
+        
+            <li><a class="toctree-l4" href="#tasks">Tasks</a></li>
+        
+            <li><a class="toctree-l4" href="#readmemd">README.md</a></li>
+        
+            <li><a class="toctree-l4" href="#meta">META</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mysql_README.md">Mysql</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Roles (File System)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../check_free_space.md">Check Free Space</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mount_filesystem_on_linux_and_windows.md">Mount Filesystem on linux and windows</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../create_volume_group.md">Create Volume Group</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../create_logical_volume.md">Create Logical Volume</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../create_physical_volume.md">Create Physical volume</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Security (Linux)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../selinux.md">SeLinux</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../ssh.md">ssh_implementation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about_gslab/">Contact</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://gslab.com/gslab_jira.md">Bug Tracker</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Automation - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Roles (Opensource Tools) &raquo;</li>
+        
+      
+    
+    <li>Httpd</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><img alt="alt text" src="/img/gslab.jpg" /></p>
+<h1 id="role-httpd">Role - httpd</h1>
+<p>This is ansible httpd role.
+The roles variables, tasks, files, and handlers that are stored in following structure.  </p>
+<pre><code>    roles/httpd/
+
+    |-- README.md
+
+    |-- defaults
+    |   `-- main.yml
+
+    |-- files
+
+    |-- handlers
+    |   `-- main.yml
+    |-- meta
+    |   `-- main.yml
+    |-- tasks
+    |   `-- main.yml
+    |-- templates
+    |-- tests
+    |   |-- inventory
+    |   `-- test.yml
+    `-- vars
+        `-- main.yml
+</code></pre>
+<p><strong>Note:</strong> Sample value provided for contact and license information."</p>
+<h4 id="version-2441"><component> Version - 2.4.41</h4>
+<p><a href="http://gslab.com/terms">TermsOfService:</a></p>
+<h4 id="contact">Contact:</h4>
+<p><strong>IDM Clould automation team</strong> - <a href="" title="http://gslab.com/contact">Website</a> <a href="mailto:componentowner@gslab.com">Email</a></p>
+<h4 id="license">License:</h4>
+<blockquote>
+<pre><code>  name: "Component license information"
+  url: "https://&lt;component - license &gt;/license_info"
+</code></pre>
+</blockquote>
+<h4 id="servers">Servers:</h4>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://ansible:5001/</td>
+<td align="center">Ansible Controller Server</td>
+</tr>
+<tr>
+<td>http://vCenter:5002/</td>
+<td align="center">vCenter servers (End point) / Public Cloud (E.g. AWS, Google Cloud)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="security">Security:</h4>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http://ansibleVault:5001/</td>
+<td align="center">Ansible Vault Server (End point)</td>
+</tr>
+<tr>
+<td>http://hashicorp vault:5002/</td>
+<td align="center">Hashicorp vault Server (End point)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tags">Tags:</h4>
+<pre><code>  - name: Web server
+    description: Web server
+</code></pre>
+<h4 id="externaldocs">ExternalDocs:</h4>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>https:// &lt;component-docs>/</td>
+<td align="center">&lt; Tools/Component&gt; Documentation</td>
+</tr>
+<tr>
+<td>E.g. https://httpd.apache.org/</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="paths-and-variables">Paths and Variables</h2>
+<p><dl> 
+    <dt> roles/httpd/defaults/main.yml </dt>
+        <dd>
+            Summary:<p>
+            Default attributes used for this component. </p>
+            Description:<p>
+            In this file use variables related only of <br> 
+            this component and not generic such as repo server, temp dir, etc.</p>
+        </dd>
+        <strong>Variables:</strong>
+        <dd>
+            <p>
+            Variable name and it's value. <br>
+            <code>httpd_listen_port: 80</code> <br>
+            schema:<br>
+            <code>type: int</code><br>
+            version: <br>
+            <code>version: "2.4.41"</code><br>
+            schema:<br>
+            <code>type: string</code><br><br />
+            </p>
+        </dd>
+</dl>         <br />
+<dl> 
+    <dt> roles/httpd/vars/main.yml </dt>
+        <dd>
+            Summary:<p>
+            The variables defined in this directory are meant for role internal use only. </p>
+            Description:<p>
+            It is a good idea to namespace your role variable names, to prevent potential 
+            naming conflicts with variables outside of your role. For example, if you needed 
+            a variable named config_file in your baseline playbook, you may want to name your<br />
+            variable baseline_config_file, to avoid conflicts with another possible config_file 
+            variable defined elsewhere.
+            </p>
+        </dd>
+        <strong>Variables: (Variable name and it's values)</strong>
+        <dd>
+            <p>
+            Temp dir: <br>
+            <code>temp_dir: "/tmp/gsl/"</code> <br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Software Repo path: <br>
+            <code>repo_path: "http://reposerver/downlods/httpd"</code><br>
+            Schema:<br>
+            <code>type: string</code></br>
+            Installation directory: <br>
+            <code>install_dir: "/opt/httpd"</code><br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Log directory: <br>
+            <code>log_dir: "./logs/ansible.log"</code><br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Archive name: <br>
+            <code>archive_name: "NA"</code><br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Fixpack name: <br>
+            <code>fix_pack: "NA"</code><br>
+            Schema:<br>
+            <code>type: string</code><br>
+            expand area: <br>
+            <code>expand_area: "NA"</code><br>
+            Schema:<br>
+            <code>type: string</code><br>      <br />
+            </p>
+        </dd>
+</dl><br />
+<dl> 
+    <dt> group_vars/all.yml </dt>
+        <dd>
+            Summary:<p>
+            Variables listed here are applicable to all host groups. </p>
+            Description:<p>
+            In this file use variables which are applicable to all host groups.
+            E.g. ntp server, dnsserver etc.</p>
+        </dd>
+        <strong>Variables:</strong>
+        <dd>
+            <p>
+            NTP Server:<br>
+            <code>ntpserver: 192.168.1.2</code> <br>
+            Schema:<br>
+            <code>type: string</code><br>
+            DNS Server:<br>
+            <code>dnsserver: 192.168.1.1</code> <br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Git repo: <br>
+            <code>repository: https://github.com/playbooks.git</code><br>
+            </p>
+        </dd>
+</dl>         <br />
+<dl> 
+    <dt> extra_vars.json </dt>
+        <dd>
+            Summary:<p>
+            Passing variables on the command line. </p>
+            Description:<p>
+            In addition to vars_prompt and vars_files, it is possible to 
+            set variables at the command line using the --extra-vars (or -e) argument. 
+            Variables can be defined using a single quoted string 
+            (containing one or more variables) using one of the formats below.
+            Example,
+            ansible-playbook httpd.yml --extra-vars "version=2.4.1 other_variable=foo"
+            <strong>Note:</strong> Values passed in using the key=value syntax are interpreted as 
+            strings. Use the JSON format if you need to pass in anything that shouldn’t 
+            be a string (Booleans, integers, floats, lists etc).
+            Using json/yml format
+            ansible-playbook release.yml --extra-vars '{"version":"1.23.45","other_variable":"foo"}'
+            ansible-playbook arcade.yml --extra-vars '{"pacman":"mrs","ghosts":["inky","pinky","clyde","sue"]}'
+            <strong>vars from a JSON or YAML file:</strong>
+            ansible-playbook release.yml --extra-vars "@extra_var.json"
+            E.g. of extra_var.json
+            {
+                "ansible_sudo_pass":ansible123,
+                "mysql_install_dir":"/opt/httpd_in_exta_var"
+            }
+            </p>
+        </dd>
+        <strong>Variables:</strong>
+        <dd>
+            <p>
+            Sudo Password:<br>
+            <code>ansible_sudo_pass: ansible123,</code> <br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Httpd Install dir E.g.:<br>
+            <code>httpd_install_dir: "/opt/httpd"</code> <br>
+            Schema:<br>
+            <code>type: string</code><br>
+            Git repo: <br>
+            <code>repository: https://github.com/playbooks.git</code><br>
+            </p>
+        </dd>
+</dl></p>
+<h2 id="files-and-templates">Files and Templates</h2>
+<p><dl> 
+    <dt> roles/httpd/templates </dt>
+        <dd>
+            Summary:<p>
+            Fles for use with the copy resource amd script files for use with the script resource. </p>
+            Description:<p>
+            The copy module copies a file from the local or remote machine to a location 
+            on the remote machine.
+            If you need variable interpolation in copied files, use the template 
+            module. Using a variable in the content field will result in unpredictable output.
+            For Windows targets, use the win_copy module instead.<br>
+            <strong><em>Ansible does not need a path for resources stored in them when working in the role. 
+            Ansible checks them first. You may still use the full path if you want to reference 
+            files outside of the role, however, best practices suggest that you keep all of 
+            the role components together.</em></strong><br>
+            </p>
+        </dd>
+        <strong>files:</strong>
+        <dd>
+            <p>
+              Create a file named index.html containing some sample text. 
+              Example,<br>
+              <code>$cat &gt;index.html</code><br>
+                <code>Hello Word!</code><br>
+              <code>$ cat index.html</code><br>
+                <code>Hello Word!</code><br>
+            </p>
+        </dd>
+        <strong>templates:</strong>
+        <dd>
+            <p>
+              create a template of our httpd.conf file <strong>by copying an existing 
+              one from a fresh install of httpd.</strong><br> 
+              Define a couple of default variables in our role and replace it in
+              template using variable name. E.g.
+              E.g. We will do a default listening port of 80 and a LogLevel that 
+              will default to warn. We can do this by adding an entry to defaults/main.yml:
+              Example,<br>
+              <code>$cat defaults/main.yml</code><br>
+              ---<br>
+              # defaults file for roles/httpd<br>
+                httpd_listen_port: 80<br>
+                httpd_log_level: war<br>
+              <strong>Create template file, E.g.:</strong><br>
+              <code>$ cd templates</code><br>
+              <code>$ cat &gt;httpd.conf.j2</code><br>
+                   listen "{{ httpd_listen_port }}"<br>
+                   loglevel "{{ httpd_log_level }}"<br><br />
+<strong>Note:</strong> template file has the .j2 extension. <br>
+            </p>
+        </dd>
+</dl></p>
+<h2 id="handlers">Handlers</h2>
+<p><dl> 
+    <dt> roles/httpd/handlers  </dt>
+        <dd>
+            <p>
+            Summary: Contains handlers, which may be used by this role or even anywhere outside this role </p>
+            Description: <p>
+            Ansible handlers are simply tasks that may be flagged during a 
+            play to run at the play’s completion.</p>
+            Example:<p>
+            Create the handler for the Restart HTTPd 
+            <strong><em>in "roles/httpd/handlers/main.yml"</em></strong>
+            with the following content,<br>
+            <code>---</code><br>
+            <code>- name: Restart HTTPd</code><br> 
+                <code>service:</code><br> 
+                <code>name: httpd</code> <br>
+                <code>state: restarted</code> <br> 
+                <code>become: True</code> <br>
+            and in task, you can specify notify e.g. <br>
+            tasks:<br>
+            <code>---</code><br>
+            <code>- name: Restart HTTPd</code><br>
+                 <code>command: echo "this task will restart the web services"</code><br>
+                 <code>notify: "Restart HTTPd"</code><br>
+             </p>
+        </dd>
+</dl></p>
+<h2 id="tasks">Tasks</h2>
+<p><dl> 
+    <dt> roles/httpd/files </dt>
+        <dd>
+            <p>
+            Summary: Ansible Tasks. </p>
+            Descripton:<p> 
+            Create Tasks for <tool/component> role as per <tool/component> documentation.</p><br />
+        </dd>
+</dl></p>
+<h2 id="readmemd">README.md</h2>
+<h6 id="role-name-httpd">Role name: httpd <br></h6>
+<p>Instructions for use:</p>
+<h6 id="running-the-playbook">Running the playbook:</h6>
+<p>Usage - </p>
+<h6 id="clean-up">Clean up<br></h6>
+<ul>
+<li>Delete any empty/unused boilerplate folders and YAML files.<br></li>
+<li>rename readme.md to README.md (Ansible Galaxy requires the filename to be uppercase.)</li>
+</ul>
+<h2 id="meta">META</h2>
+<pre><code>    |-- meta
+    |   `-- main.yml
+</code></pre>
+<p>
+    Summary:<p> 
+        When Galaxy imports a role, the import process looks for 
+        metadata found in the role’s meta/main.yml file. </p>  
+    Description:<p>
+        Role dependencies allow you to automatically pull in other roles 
+        when using a role. Role dependencies are stored in the meta/main.yml 
+        file contained within the role directory. </p>
+    Update meta/main.yml file:<br>
+    Example,<br>
+    <p> 
+    galaxy_info:
+        author: GSL Team<br>
+        description: httpd playbook
+        company: GS Lab <br>
+        license: license (GPL-2.0-or-later, MIT, etc)<br>
+        min_ansible_version: 2.4 <br>
+        galaxy_tags: []<br>
+        dependencies: []<br>   
+    </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about_gslab/" class="btn btn-neutral float-right" title="Contact">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../automation_readme/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../automation_readme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../about_gslab/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

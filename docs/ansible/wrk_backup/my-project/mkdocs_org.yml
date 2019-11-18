@@ -1,0 +1,14 @@
+site_name: My Docs
+nav:
+    - Home: automation_readme.md
+    - Examples of Markdown: markdown_readme.md
+    - Automation doc: index.md
+    - About: about.md
+    - Contact: about.md
+    - Bug Tracker: https://example.com/
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust

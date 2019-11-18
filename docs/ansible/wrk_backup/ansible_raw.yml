@@ -1,0 +1,11 @@
+---
+             - host: linuxhost
+             gather_facts: False
+             remote_user: test
+             become: yes
+             become_user: root
+             become_method: sudo
+
+             tasks:
+               - name: Install python
+                 raw: test -e /usr/bin/python

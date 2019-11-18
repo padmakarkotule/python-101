@@ -1,0 +1,14 @@
+---
+# Favorite movies
+ - Casablanca
+ - North by Northwest
+ - The Man Who Wasn't There
+ - [milk, groceries, eggs, juice, fruits]
+ - {name: John Smith, age: 33}
+ - name: Mary Smith
+   age: 27
+
+ men: [John Smith, Bill Jones]
+ women:
+   - Mary Smith
+   - Susan Williams

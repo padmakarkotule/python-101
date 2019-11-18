@@ -1,0 +1,11 @@
+site_name: My Docs
+nav:
+    - Home: automation_readme.md
+    - Contact: about_gslab.md
+    - Bug Tracker: https://gslab.com/gslab_jira.md
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
