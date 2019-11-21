@@ -1,0 +1,11 @@
+title: Padmakar Kotule
+heading_1: Jinja2 Welcomes You.
+paragraph_1: <
+  Jinja2 is a modern and designer-friendly templating language for Python. <br>
+  This is paragraph.<br>
+  Jinja2 is a modern and designer-friendly templating language for Python.<br>
+  This is paragraph.<br>
+  Jinja2 is a modern and designer-friendly templating language for Python.<br>
+  This is paragraph.<br>
+paragraph_2: Paragraph2
+logo_image: img/logo.jpg alt="Logo" width="150" height="80"

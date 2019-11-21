@@ -21,8 +21,9 @@ print("... Output after yaml.load func, (YAML_to_JSON), converted.:\n", data)
 print("\n")
 
 # Convert dict (data loaded from Yaml) object into json object
-json_output = json.dumps(data, indent=4, separators=(',', ': '))
-print("... Output after json.dumps:\n", json_output)
+# ** IMP - data is alreadt dict obj. so no need to again json dumps
+#json_output = json.dumps(data, indent=4, separators=(',', ': '))
+#print("... Output after json.dumps:\n", json_output)
 
 # Dump data into json file after converting YAML to JSON
 with open('output_02_yaml_dump_to_json_in_file.json', 'w') as jsonfile:  # writing JSON object
@@ -40,3 +41,5 @@ YAML :Data serialization language, designed to be human friendly and works
       Note that YAML takes the value in string format and represents the output.
       Example,      
 '''
+host = data['test']['host']
+print("----HOST:", host)
