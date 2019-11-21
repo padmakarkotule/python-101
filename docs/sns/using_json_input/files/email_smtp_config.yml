@@ -1,0 +1,92 @@
+---
+# ** Gmail SMTP server configuration. Note: We use tls port.**
+# You can use either tls port or ssl port during configuration.
+# Gmail server
+smtp_server: smtp.gmail.com
+# SMTP Server TLS port (Security used using TLS protocol)
+smtp_port_tls: 587
+# SMTP Server SSL port (Security used using SSL protocol)
+smtp_port_ssk: 465
+# Service account details to login SMTP server.
+# This email address consider as service account for smtp (gmail) login.
+email_service_account: djangomailhost@gmail.com
+# Service account password
+email_service_account_password: restdjango
+
+# ** Email MIME configuration **
+  # MIME Type - MIMEMultipart('alternative')
+  # Multipart/alternative emails contain both a plain text and an HTML part. Which part
+  # is shown to the user is determined by their email client, and (in some cases) by their choice.
+  # If an email client cannot render HTML messages, it will display the plain text version.
+  # TML-enabled email programs will usually show the rich HTML version.
+  # With multipart/alternative messages just about everybody gets the best of both worlds,
+  # and you do not have to ask subscribers for their preference and maintain two separate subscriber
+  # lists or further complicate segmentation.
+  # The only disadvantage of multipart/alternative messages is their (slightly) larger size.
+mime_type: MIMEMultipart('alternative')
+
+# Attached File Mimetype
+  # A MIME attachment with the content type
+  # A MIME attachment with the content type "application/octet-stream" is a binary file.
+  # Typically, it will be an application or a document that must be opened in an application, e.g. .doc
+  # No matter what kind of file it is, an application/octet-stream attachment is rarely
+  # viewable in an email or web client.
+  # Example, instance of MIMEBase and named as p
+  # p = MIMEBase('application', 'octet-stream')
+mime_base: MIMEBase('application', 'octet-stream')
+
+# python-magic is a python interface to the libmagic file type identification library.
+# Instead of assuming application/octet-stream, we can use the python-magic module.
+
+# Subject Encoding
+  # The original version used a simple assignment to define the Subject line.
+  # E.g.  msg['Subject'] = subjec
+  # But this limits the Subject line to 7-bit ASCII characters only. For foreign language
+  # support and other encodings, it's better to use theemail.Header package, which requires an additional import:
+  # Example, import email header
+  # from email.header import Header, decode_header, make_header
+  # The Subject line assignment changes to:
+  # always pass Unicode strings to Header, otherwise it will use RFC 2047 encoding
+  # even on plain ASCII strings    msg['Subject'] = Header(to_unicode(subject), 'iso-8859-1').
+
+  # Where the to_unicode() function is defined as:
+  # def to_unicode (s):
+     #"""Convert the given byte string to unicode, using the standard encoding,    unless it's already encoded that way"""
+    #if s:
+      #if isinstance(s, unicode):
+        #return s
+      #else:
+        #return unicode(s, 'utf-8')
+
+# Email Address Encoding
+  # Unlike the Subject line, all email addresses must be ascii, so instead of defining the recipient list like this:
+  # msg['To'] = COMMASPACE.join(to)
+  # We should map an explicit ascii encoding function over each email address, like this:
+  # msg['To'] = COMMASPACE.join(map(lambda x: x.encode('ascii'), to))
+
+# Body Text Encoding
+  # Finally, the message body text, regardless of whether or not it's plain text, html, or both, must be unicode.
+  # So we go from this:
+  # msg.attach( MIMEText(text)
+  # To this:
+  # msg.attach(MIMEText(to_bytestring(text), 'plain', 'utf-8').
+
+  # If we want an html message body, we would do this:
+  # msg.attach(MIMEText(to_bytestring(html_text), 'html', 'utf-8')
+
+  # **Actually, if you are going to use html in email messages at all, the best practice
+  # is to provide both a plain text and an html equivalenttogether, like this**
+  # msg.attach(MIMEText(to_bytestring(text), 'plain', 'utf-8'))
+  # msg.attach(MIMEText(to_bytestring(html_text), 'html', 'utf-8'))
+
+  # In all the examples above, the to_bytestring() function is defined as
+
+  # bytestring_example:
+  # def to_bytestring (s):
+  # """Convert the given unicode string to a bytestring, using the standard encoding, unless it's already a bytestring"""
+  # if s:
+  #   if isinstance(s, str):
+  #     return s
+  #   else:
+  #     return s.encode('utf-8')
+

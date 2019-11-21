@@ -8,9 +8,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-from email.header import Header, decode_header, make_header
-from email.utils import COMMASPACE, formatdate
-
 
 def generate_email_output(template_file_name, payload):
     # Declare email template file path.
@@ -33,13 +30,12 @@ def generate_email_output(template_file_name, payload):
     #print("Output:", output)
     #print(output)
 
+
     with open(email_html_output_file, 'w') as output_file:
         output_file.write(output)
 
 
-def send_email(file):
-    # In future ref. link to explore more things.
-    # https://denis.papathanasiou.org/archive/2010.09.04.post.pdf
+def send_email():
     title = "Development App"
     logo_image = "img/byjus.jpg alt=\"Logo\" width=\"350\" height=\"90\""
     parent_name = "Padmakar"
