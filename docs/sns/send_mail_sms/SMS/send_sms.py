@@ -1,26 +1,50 @@
-#!/usr/bin/env python
-
+import json
 import urllib.request
 import urllib.parse
 
-def sendSMS(apikey, numbers, sender, message):
 
-    data = urllib.parse.urlencode({'apikey': apikey, 'numbers': numbers,
-                                   'message': message, 'sender': sender})
-    data = data.encode('utf-8')
-    sms_host_uri = "https://api.textlocal.in/send/?"
-    #request = urllib.request.Request("https://api.textlocal.in/send/?")
-    request = urllib.request.Request(sms_host_uri)
+class SendSMS:
+    def __init__(self, sender=None, apikey=None):
+        # Sender
+        # Note: We must get our company name 6 digit as send code from textlocal company.
+        # If we don't have our own code then we can use textlocal company code which is TXTLCL
+        if sender:
+            self.sender = sender
+        else:
+            self.sender = "TXTLCL"
 
-    f = urllib.request.urlopen(request, data)
-    fr = f.read()
-    return (fr)
+        # Api key
+        # Valid apikey, you can generate apikey from your textlocal account.
+        # Login to textlocal -> setting -> API Keys
+        if apikey:
+            self.apikey = apikey
+        else:
+            self.apikey = "NBc6Q0YC2Ds-9rdxDAKcpXUpuCu10dtMYPmj1Pvn3Z"
 
+    # def sendSMS(apikey, numbers, sender, message):
+    def send_sms(self, recipients, message):
 
-apikey = "K045iCgiC5I-KuGBKySHrWEdO1nDmPRj9CxDaVdtt9"
-sender = "PKOTULE"
-recipient_to = "7774005057"
-message = "Test message from Padmakar using Python"
+        # SMS service provider uri. E.g. textlocal (https://textlocal.in)
+        sms_host_uri = "https://api.textlocal.in/send/?"
 
-resp = sendSMS(apikey, recipient_to, sender, message)
-print(resp)
+        # API key and sender values
+        apikey = self.apikey
+        sender = self.sender
+
+        # Recipient number (to whom you are sending message)
+        recipient_to = recipients
+
+        # Text message
+        message = message
+
+        # Prepare data to send message
+        data = urllib.parse.urlencode({'apikey': apikey, 'numbers': recipient_to,
+                                       'message': message, 'sender': sender})
+        data = data.encode('utf-8')
+        # Prepare request
+        request = urllib.request.Request(sms_host_uri)
+
+        # Set response variable to return response
+        rsp = urllib.request.urlopen(request, data)
+        rsp_read = rsp.read()
+        return (rsp_read)
