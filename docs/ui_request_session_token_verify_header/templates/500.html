@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Page Not Found{% endblock title %}
+
+{% block content %}
+    <div class="500_error">
+        <h1> Internal Server - Error {{ error }} - Using Normal HTML H1 tag </h1>
+    </div>
+
+    <div class="alert alert-danger">
+        <strong>Internal Server - Error {{ error }} - Using bootstrap </strong>
+    </div>
+
+{% endblock %}

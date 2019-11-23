@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>{% block title %}Home{% endblock title %}</title>
+        <!-- Including web site meta information which is needed for SEO.-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" value="en-US" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{{ STATIC_URL }}media/favicon.ico">
+
+        <!-- Including Bootstrap information.-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- Including css files. (component specific css section added in same file i.e. style.css-->
+
+
+        <!-- Including js script paths.-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
+        <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+        <script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
+        <style>.calendar>table>caption{caption-side:unset}</style><!--caption fix for bootstrap4-->
+        {{ form.media }}        {# Form required JS and CSS #}
+
+
+        {% load static %}
+
+        {% block head %}
+        {% endblock head %}
+    </head>
+
+    <header>
+        <!-- Including header html which will be used across the Project.-->
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock header %}
+    </header>
+
+    <body>
+        {% block content %}
+        {% endblock content %}
+    </body>
+
+    <footer>
+        <!-- Including footer html which will be used across the Project.-->
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock footer %}
+    </footer>
+</html>

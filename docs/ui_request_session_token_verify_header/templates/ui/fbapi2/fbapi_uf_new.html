@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Add Rescord{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/iam.css' %}">
+{% endblock head %}
+
+{% block content%}
+        <div class="col-sm-5 col-md-offset-4" style="background: white;position: static;margin-top:49px;">
+        <br>
+            <div class="panel panel-success" style="">
+        <div class="panel-heading">
+            <h3 class="">Add record</h3>
+        </div>
+        <br>
+            <div class="panel-body">
+        <form class="md-form" method="post" action="/fbapi_uf/new/" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.username.label_tag }}<br> {{ form.username }}<br>
+            {{ form.password.label_tag }}<br> {{ form.password }}<br>
+                        {{ form.contact.label_tag }} <br> {{ form.contact }}<br>
+            {{ form.email.label_tag }}<br> {{ form.email }}<br>
+            {{ form.date.label_tag }} {{ form.date }}<br>
+            {{ form.time.label_tag }} {{ form.time }}<br>
+            {{ form.upload_image.label_tag }} {{ form.upload_image }}<br>
+            {{ form.birth_year.label_tag }} {{ form.birth_year }}<br>
+            {{ form.favorite_color.label_tag }} {{ form.favorite_color }}<br>
+            {{ form.favorite_colors.label_tag }} {{ form.favorite_colors }}<br>
+            {{ form.choice_field.label_tag }} {{ form.choice_field }}<br>
+            {{ form.url.label_tag }} {{ form.url }}<br>
+            {{ form.description.label_tag }} {{ form.description }}<br>
+            {{ form.comments.label_tag }} {{ form.comments }}<br>
+            {{ form.yes_no.label_tag }} {{ form.yes_no }}<br>
+            {{ form.boolean_null.label_tag }} {{ form.boolean_null }}<br>
+            {{ form.On_Off.label_tag }} {{ form.On_Off }}<br>
+            {{ form.Enabled_Disabled.label_tag }} {{ form.Enabled_Disabled }}<br>
+            {{ form.agree.label_tag }} {{ form.agree }}<br>
+            <input type="submit" value="Submit Query" class="btn btn-primary" onclick="add_catalog()">
+        </form>
+            </div>
+        <div class="panel-footer">
+                <h5 style="padding-left:5%">REST API - Example </h5>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Including footer html which will be used across the Project.-->
+{% endblock content %}
+    <footer>
+        <!-- Including footer html which will be used across the Project.-->
+        {% block footer %}
+        {% endblock footer %}
+    </footer>
