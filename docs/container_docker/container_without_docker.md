@@ -6,7 +6,7 @@ Often thought of as cheap VMs,
 That isolation leverages several underlying technologies built into the Linux kernel: 
     - namespaces, 
     - cgroups, 
-    - chroots and lots of terms you’ve probably heard before.
+    - chroots, namespace (unshare - system call), union file system.
 
 Using underlying technologies to build our own containers.
 
@@ -40,10 +40,11 @@ looks like a Debian file system and will be our playground for isolating process
    Excellent talk on container (sysdiag & CoreOS) **https://www.youtube.com/watch?v=gMpldbcMHuI**
 3. **chroot**
     The first tool we’ll be working is chroot.
-   **chroot. A thin wrapper around the similarly named syscall, it allows us to restrict a process view of 
+   **chroot, A thin wrapper around the similarly named syscall, it allows us to restrict a process view of 
       the file system. E.g.  restrict process to the “rootfs” directory and then exec a shell.**<br>
    
-   **A process/command that is run in such a modified environment cannot access files outside the root directory. 
+   **A process/command that is run in such a modified environment cannot access files outside the root directory.**
+    
    This **modified environment is commonly known as “jailed directory” or “chroot jail”.** 
    Only a privileged process and root user can use chroot command.
    
