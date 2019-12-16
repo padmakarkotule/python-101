@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/container_docker/container.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/ulysses.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_app1_another_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_application-1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_gunicorn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_waitress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_wsgi_example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/container_docker/container_without_docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/container_docker/container_without_docker.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,29 +23,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/container_docker/container_without_docker.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="142">
-                <caret line="385" column="70" lean-forward="true" selection-start-line="385" selection-start-column="12" selection-end-line="385" selection-end-column="70" />
-                <folding>
-                  <element signature="e#4644#4963#0" />
-                </folding>
+              <first_editor relative-caret-position="-1581">
+                <caret line="27" selection-start-line="27" selection-end-line="27" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/container_docker/container.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="244">
-                <caret line="471" column="11" lean-forward="true" selection-start-line="471" selection-start-column="11" selection-end-line="471" selection-end-column="11" />
-              </first_editor>
-              <second_editor />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_waitress.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_gunicorn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -66,6 +78,7 @@
       <find>rootfs</find>
       <find>Ref. link</find>
       <find>Ref</find>
+      <find>http</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1 IntroOfPython_Operators.py" />
         <option value="$PROJECT_DIR$/02-1_Built-in_datatypes_ways_of_creation.py" />
         <option value="$PROJECT_DIR$/02_1_Built-in_datatypes_ways_of_creation.py" />
         <option value="$PROJECT_DIR$/02_2_Branching_and_loops.py" />
@@ -119,6 +131,13 @@
         <option value="$PROJECT_DIR$/docs/container_docker/Container.md" />
         <option value="$PROJECT_DIR$/docs/container_docker/container_without_docker.md" />
         <option value="$PROJECT_DIR$/docs/container_docker/container.md" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/web_application.py" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/web_app1.py" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/ulysses.txt" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_wsgi_example.py" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_waitress.py" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_gunicorn.py" />
+        <option value="$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md" />
       </list>
     </option>
   </component>
@@ -151,18 +170,7 @@
               <item name="Python101" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python101" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="container_docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python101" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python101" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python101" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python101" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="container_docker" type="462c0819:PsiDirectoryNode" />
+              <item name="celery" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,9 +336,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.2533757" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.2533757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.24305004" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -342,7 +349,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.123844735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3844732" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.9445471" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -380,24 +387,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/repeat_code_example_single_doc.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/convert_yaml_to_json_single_doc.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/convert_yaml_to_json_multi_doc_in_singlefile.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/02_yml_repeat_code_example_yaml_to_json_single_doc.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/01_yml_general_example.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/01_yaml_general_example.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/02_yml_repeat_code_example_single_doc.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_yaml_to_json_multi_doc_in_singlefile.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_multi_doc_in_singlefile.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/01_yaml_load_convert_json_example.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/01_yaml_load_convert_json_example.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_to_json_dump_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/Yaml/yaml_to_json_dump_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/Yaml/01_yaml_dump_to_json_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/Yaml/01_yaml_load_and_dump_convert_json_example.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/Yaml/01_output_yaml_dump_to_json_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/01_output_yaml_dump_to_json_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/03_output_json_to_yaml_dump_in_file.yaml" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_03_json_to_yaml_dump_in_file.yaml" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/03_yaml_dump_convert_json_to_yaml_example.py" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/02_yaml_load_and_convert_to_json_example.py" />
@@ -549,16 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/celery/celery.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1819">
-            <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/yaml_json/yaml_python_examples/01_yaml_general_example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -572,11 +551,72 @@
     <entry file="file://$PROJECT_DIR$/img/container_docker/Container_kernel_highlevel_view.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$USER_HOME$/.docker/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/container_docker/Overlay_fs_union_fs_in_docker.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/roles/httpd/handlers/main.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/roles/httpd/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/docs/markdown_readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/extra_var.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/Pattern2_PaaS_CentOS_7.x.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/Pattern1_IaaS_CentOS_7.x.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/deploy_ansible_example.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/docs/automation_readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="6664">
+            <caret line="437" column="34" lean-forward="true" selection-start-line="437" selection-start-column="34" selection-end-line="437" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/container_docker/container.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="193">
+            <caret line="480" column="41" selection-start-line="480" selection-start-column="41" selection-end-line="480" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/container_docker/container_without_docker.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="142">
-            <caret line="385" column="70" lean-forward="true" selection-start-line="385" selection-start-column="12" selection-end-line="385" selection-end-column="70" />
+            <caret line="385" column="70" selection-start-line="385" selection-start-column="12" selection-end-line="385" selection-end-column="70" />
             <folding>
               <element signature="e#4644#4963#0" />
             </folding>
@@ -585,17 +625,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.docker/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/container_docker/Overlay_fs_union_fs_in_docker.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/container_docker/container.md">
+    <entry file="file://$PROJECT_DIR$/docs/celery/celery.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="244">
-            <caret line="471" column="11" lean-forward="true" selection-start-line="471" selection-start-column="11" selection-end-line="471" selection-end-column="11" />
+          <first_editor relative-caret-position="119">
+            <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application-1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#21#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/ulysses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_app1_another_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_wsgi_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/markdown_mkdocs_/markdown_readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="80">
+            <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_waitress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_gunicorn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-1581">
+            <caret line="27" selection-start-line="27" selection-end-line="27" />
           </first_editor>
           <second_editor />
         </state>
