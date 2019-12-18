@@ -1,4 +1,4 @@
-# Container without docker 
+# Container without docker (from scratch)
 Introduction to containers without Docker.
 Ref. Link - https://ericchiang.github.io/post/containers-from-scratch/
 Often thought of as cheap VMs, 

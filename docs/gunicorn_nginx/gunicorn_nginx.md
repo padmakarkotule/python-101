@@ -156,4 +156,18 @@ alternative of Gunicorn on windows is the `Waitress`.
 So it was very easy to switch from one wsgi compliant web server, i.e make_server, 
 to another wsgi compliant web server, i.e gunicorn.
 
+
+####uWSGI - another wsgi compliant web server
+
+- Install uwsgi
+    `pip install uwsgi`
+- Use uwsgi to serve your web application.
+    `uwsgi --http :8051 --wsgi-file web_application.py`
+- You should be able to access http://localhost:8051/.
+**Note**
+There is no support for windows, but you can use uWSGI in the linux subsystem in windows 10.
+Ref. - https://github.com/unbit/uwsgi/issues/1930
+
+
+
 # Setting up Django with Nginx, Gunicorn
