@@ -13,12 +13,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="-686">
                 <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/Qwiklabs/GCP_Setup_Requirements_As_per_Qwiklab.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="884">
+                <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               </first_editor>
               <second_editor />
             </state>
@@ -111,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
@@ -144,18 +156,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/Qwiklabs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/istio" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gs-1062\PycharmProjects\Python101" />
-      <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\img\container_docker" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gs-1062\PycharmProjects\python-101\docs\Qwiklabs" />
       <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\gunicorn_nginx" />
       <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\sns\using_json_input" />
       <recent name="C:\Users\gs-1062\PycharmProjects\Python101" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gs-1062\PycharmProjects\Python101" />
+      <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\img\container_docker" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -352,7 +365,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/yaml_swagger_yaml.example.yml" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/01_yaml_randam_examples.py" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/yml_load_example.py" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_02_yaml_dump_to_json_in_file.json" />
@@ -627,6 +639,16 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="-686">
             <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Qwiklabs/GCP_Setup_Requirements_As_per_Qwiklab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="884">
+            <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
           </first_editor>
           <second_editor />
         </state>
