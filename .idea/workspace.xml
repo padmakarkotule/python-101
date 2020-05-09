@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="" />
+    <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-686">
+              <first_editor relative-caret-position="-478">
                 <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
               </first_editor>
               <second_editor />
@@ -25,12 +30,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/Qwiklabs/GCP_Setup_Requirements_As_per_Qwiklab.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="884">
-                <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <first_editor relative-caret-position="170">
+                <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="284">
+                <caret line="314" column="2" selection-start-line="314" selection-start-column="2" selection-end-line="314" selection-end-column="2" />
               </first_editor>
               <second_editor />
             </state>
@@ -69,9 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/02_2_Branching_and_loops.py" />
-        <option value="$PROJECT_DIR$/02_3_String_data_type_examples.py" />
-        <option value="$PROJECT_DIR$/03_1_String_index_find_split_strip_examples.py" />
         <option value="$PROJECT_DIR$/03_2_Common_methods_between_String_List.py" />
         <option value="$PROJECT_DIR$/03_3_List_data_type_examples.py" />
         <option value="$PROJECT_DIR$/template_for_code.py" />
@@ -120,10 +134,13 @@
         <option value="$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md" />
         <option value="$PROJECT_DIR$/docs/container_docker/container_without_docker.md" />
         <option value="$PROJECT_DIR$/docs/gunicorn_nginx/Dockerfile" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
@@ -147,6 +164,12 @@
               <item name="python-101" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-101" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="istio" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -161,6 +184,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gs-1062\PycharmProjects\python-101\docs\istio" />
       <recent name="C:\Users\gs-1062\PycharmProjects\python-101\docs\Qwiklabs" />
       <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\gunicorn_nginx" />
       <recent name="C:\Users\gs-1062\PycharmProjects\Python101\docs\sns\using_json_input" />
@@ -314,8 +338,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.2533757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.25655282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.24305004" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,7 +352,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3844732" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3844732" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.9445471" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -365,10 +390,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/01_yaml_randam_examples.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/yml_load_example.py" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_02_yaml_dump_to_json_in_file.json" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_03_json_to_yaml_dump_in_file1.yaml" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_03_json_to_yaml_dump_in_file2.yaml" />
     <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/yaml_general_example.yaml" />
     <entry file="file://$PROJECT_DIR$/docs_ansible/Readme.md" />
@@ -634,11 +655,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
+    <entry file="file://$PROJECT_DIR$/docs/istio/GCP_Setup_Requirements_As_per_Qwiklab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-686">
-            <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="221">
+            <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
           </first_editor>
           <second_editor />
         </state>
@@ -649,6 +670,46 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="884">
             <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-478">
+            <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="170">
+            <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="4335">
+            <caret line="369" selection-start-line="369" selection-end-line="369" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="284">
+            <caret line="314" column="2" selection-start-line="314" selection-start-column="2" selection-end-line="314" selection-end-column="2" />
           </first_editor>
           <second_editor />
         </state>

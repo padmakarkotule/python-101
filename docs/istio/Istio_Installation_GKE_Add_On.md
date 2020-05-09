@@ -44,6 +44,8 @@ Now **run the following command to create your GKE cluster using the Istio on
     export CLUSTER_NAME=central
     export CLUSTER_ZONE=us-central1-b
     export CLUSTER_VERSION=latest
+
+**Using beta and --addons option (As per Qwiklabs)**
     
     # gcloud istio demo profile setup (use beta to start add-on)     
     gcloud beta container clusters create $CLUSTER_NAME \
@@ -70,14 +72,13 @@ Now **run the following command to create your GKE cluster using the Istio on
     central  us-central1-b  1.15.11-gke.12  35.225.138.25  n1-standard-2  1.15.11-gke.12  4          RUNNING
     padmakar_kotule@cloudshell:~ (devops-padmakar)$
 	
-    
 This command creates a cluster in a single zone, with 4 nodes, that can scale up to 8 
 nodes. **The nodes are in the default vpc network.** Stackdriver Kubernetes Engine 
 Monitoring is enabled, which you will see later. The new cluster (central) takes 
 several minutes to deploy. You can review your cluster, when deployment is complete, 
 **from the   Navigation menu > Kubernetes Engine > Clusters.**
 
-6. Once your cluster has been created, configure kubectl command line access by 
+2. Once your cluster has been created, configure kubectl command line access by 
    running the following: 
 
 
