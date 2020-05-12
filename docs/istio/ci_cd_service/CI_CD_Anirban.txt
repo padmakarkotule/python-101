@@ -1,0 +1,24 @@
+Hi Padmakar,
+
+Please find the details for the Pipeline  related work mentioned below, 
+
+    Jenkins : http://10.43.11.137:8080/
+    Pipeline : http://10.43.11.137:8080/job/DjangoProject/
+    Deployment Repository :  https://github.com/bombadeb/DjangoDeployment
+    Django Sample Project Repository :  https://github.com/bombadeb/DjangoProject
+
+Pipeline Task :  (https://github.com/bombadeb/DjangoDeployment/tree/master/JenkinsPipeline)
+1. Checkout  Deployment Repository
+2. Checkout   Django Sample Project Repository
+3. Docker-compose - build Docker images 
+4. Tagging of the Docker images 
+5. Pushing it to the Docker hub repository
+
+NOTE: As discussed, the following task that will be added next to the pipeline
+
+    Sonarqube
+    Nexus Artifactory
+    Usage of Environment Variables
+
+Regards,
+Anirban Deb

@@ -90,33 +90,13 @@ admin permissions.
 the permissions are required if you want to access telemetry data and 
 other Istio features.**
 
-#### Verify installation
+#### Verify GKE installation
 
 1.Check that your cluster is up and running.
 
 	gcloud container clusters list
 
     # Output (do not copy)
-
-2.Ensure the following Kubernetes services are deployed: 
-  istio-citadel, istio-galley, istio-pilot, istio-ingressgateway, 
-  istio-policy, istio-sidecar-injector, and istio-telemetry. 
-  You'll also see other deployed services:
-
-    kubectl get service -n istio-system
-
-    #Output 
-
-   
-3.Ensure the corresponding Kubernetes pods are deployed and all 
-containers are up and running:     
-istio-pilot-, istio-galley-, istio-policy-, istio-telemetry-, istio-ingressgateway-, 
-istio-sidecar-injector-, and istio-citadel-.
-    
-    kubectl get pods -n istio-system
-
-    # Output, 
-
 
 # Download istio and configure istioctl
 1.Use Cloud Shell to download and extract the Istio release, with the istioctl tool, 
@@ -138,7 +118,7 @@ istio-sidecar-injector-, and istio-citadel-.
 	# from istio.io with latest version - curl -L https://istio.io/downloadIstio | sh -
 	# download a specific version
 	
-	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.4.3 sh -
+	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.5.2 sh -
 	
 	# Output
     
@@ -157,6 +137,7 @@ The installation directory contains:
 
     cd ./istio-*
     export PATH=$PWD/bin:$PATH
+    ls -al
     
     # Output
     padmakar_kotule@cloudshell:~/bookinfo-lab (devops-padmakar)$ cd ./istio-1.5.2/
@@ -198,6 +179,27 @@ Envoy sidecar proxies **when you deploy your application later:**
     
     # Output
     
+### Verify Istio installation
+
+1.Ensure the following Kubernetes services are deployed: 
+  istio-citadel, istio-galley, istio-pilot, istio-ingressgateway, 
+  istio-policy, istio-sidecar-injector, and istio-telemetry. 
+  You'll also see other deployed services:
+
+    kubectl get service -n istio-system
+
+    #Output 
+
+   
+2.Ensure the corresponding Kubernetes pods are deployed and all 
+containers are up and running:     
+istio-pilot-, istio-galley-, istio-policy-, istio-telemetry-, istio-ingressgateway-, 
+istio-sidecar-injector-, and istio-citadel-.
+    
+    kubectl get pods -n istio-system
+
+    # Output, 
+
     
 ## Deploy the sample application
 

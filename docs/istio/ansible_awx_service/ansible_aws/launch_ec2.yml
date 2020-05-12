@@ -1,0 +1,22 @@
+- name: Create a sandbox instance
+  hosts: localhost
+  gather_facts: False
+  vars:
+    keypair: ansible_awx
+    instance_type: t2.micro
+    security_group: launch-wizard-1
+    image: ami-0d6621c01e8c2de2c
+    region: us-west-2
+  tasks:
+    - name: Launch instance
+      ec2:
+         key_name: "{{ keypair }}"
+         group: "{{ security_group }}"
+         instance_type: "{{ instance_type }}"
+         image: "{{ image }}"
+         count: 1
+         wait: true
+         region: "{{ region }}"
+         vpc_subnet_id: subnet-ec659594
+         assign_public_ip: yes
+      register: ec2

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +42,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="284">
-                <caret line="314" column="2" selection-start-line="314" selection-start-column="2" selection-end-line="314" selection-end-column="2" />
+              <first_editor relative-caret-position="1904">
+                <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
               </first_editor>
               <second_editor />
             </state>
@@ -86,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03_2_Common_methods_between_String_List.py" />
         <option value="$PROJECT_DIR$/03_3_List_data_type_examples.py" />
         <option value="$PROJECT_DIR$/template_for_code.py" />
         <option value="$PROJECT_DIR$/03_4_Tuple_examples.py" />
@@ -137,6 +135,7 @@
         <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md" />
       </list>
     </option>
   </component>
@@ -390,24 +389,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/output_03_json_to_yaml_dump_in_file2.yaml" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/yaml_general_example.yaml" />
-    <entry file="file://$PROJECT_DIR$/docs_ansible/Readme.md" />
-    <entry file="file://$PROJECT_DIR$/python_yaml_json/yaml_python_examples/01_yaml_general_example.py" />
-    <entry file="file://$PROJECT_DIR$/docs/sns/sendmail.py" />
-    <entry file="file://$PROJECT_DIR$/docs/sns/test.html" />
-    <entry file="file://$PROJECT_DIR$/17 DecoratorWithArgument_ExceptionHandling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3978" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/16 Funct_ClassDecorators_Combinations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/18 CustomClasses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-918" />
@@ -675,11 +656,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="4335">
+            <caret line="369" selection-start-line="369" selection-end-line="369" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="-478">
             <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/opensatck_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+          <folding>
+            <element signature="e#22#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/file_handler_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/json/networkContent.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/scripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2955" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="423">
+            <caret line="249" column="23" lean-forward="true" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
@@ -695,21 +733,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="4335">
-            <caret line="369" selection-start-line="369" selection-end-line="369" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/scripts/d3-instant-charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+    <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="284">
-            <caret line="314" column="2" selection-start-line="314" selection-start-column="2" selection-end-line="314" selection-end-column="2" />
+          <first_editor relative-caret-position="1904">
+            <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
           </first_editor>
           <second_editor />
         </state>

@@ -1,0 +1,24 @@
+---
+DEFAULT:
+  LogFilePath: "logs.log"
+  LogLevel: "INFO"
+  SettingsDebugFlag: "False"
+MONGO:
+  ServerIP: "localhost"
+  ServerPort: "27017"
+  Database: "test"
+  RolesCollection: "roles"
+  UserCollection: "users"
+  ReservedIPCollection: "reserved_ips"
+  AuditLogCollection: "audit_logs"
+INFOBLOX:
+  InfobloxURL: "https://192.168.42.170/wapi/v2.7.1"
+  InfobloxUsername: "admin"
+  InfobloxPassword: "infoblox"
+ROLES:
+  AdminRoles:
+    - "Manager"
+    - "Infoblox Admin"
+  UserRoles:
+    - "User"
+
