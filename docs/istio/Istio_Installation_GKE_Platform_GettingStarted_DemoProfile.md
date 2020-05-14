@@ -302,6 +302,33 @@ default. The Kiali dashboard shows an overview of your mesh with the relationshi
 between the services in the Bookinfo sample application. It also provides filters 
 to visualize the traffic flow.
 
+## Accessing The Kiali Service
+Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-with-kiali
+
+Since Kiali is, by default, an internal service, you can access it in either of two ways:
+
+**Using port forwarding**
+
+    kubectl -n istio-system port-forward svc/kiali  20001:20001
+    
+**Convert the service to LoadBalancer**
+
+    kubectl patch service kiali --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    
+    # Then get the IP address and port:
+    kubectl -n istio-system get service kiali -o jsonpath='{.status.loadBalancer.ingress[0].ip}
+    kubectl -n istio-system get service kiali -o jsonpath='{.spec.ports[?(@.name=="http-kiali")].port}'    
+
+Navigate to the Kiali URL 
+
+    for example, http://<Kiali-load-balance-IP>:20001/kiali/
+    http://52.150.35.253:20001/kiali/
+    you should see a page similar to the following:
+
+
+
+
+
 # Next steps
 
 These tasks are a great place for beginners to further evaluate 

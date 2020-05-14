@@ -51,6 +51,11 @@ with following command,
     ✔ Installation complete
     padmakar_kotule@cloudshell:~/bookinfo-lab/istio-1.5.2$
 
+You can also access from console, but need to expose port and then access it.
+
+    istioctl dashboard jaeger
+    
+
 ## Kiali - on Istio
 Kiali is an observability console for Istio with service mesh configuration capabilities.
 **set the addonComponents.kiali.enabled configuration parameter**
@@ -71,6 +76,32 @@ with following command,
     ✔ Installation complete
     padmakar_kotule@cloudshell:~/bookinfo-lab/istio-1.5.2$
 
+## Accessing The Kiali Service
+Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-with-kiali
+
+Since Kiali is, by default, an internal service, you can access it in either of two ways:
+
+**Using port forwarding**
+
+    kubectl -n istio-system port-forward svc/kiali  20001:20001
+    
+**Convert the service to LoadBalancer**
+
+    kubectl patch service kiali --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    
+    # Then get the IP address and port:
+    kubectl -n istio-system get service kiali -o jsonpath='{.status.loadBalancer.ingress[0].ip}
+    kubectl -n istio-system get service kiali -o jsonpath='{.spec.ports[?(@.name=="http-kiali")].port}'    
+
+Navigate to the Kiali URL 
+
+    for example, http://<Kiali-load-balance-IP>:20001/kiali/
+    http://52.150.35.253:20001/kiali/
+    you should see a page similar to the following:
+
+
+
+
 **Jaeger**
 Jaeger is open source, end-to-end distributed tracing.
 **set the addonComponents.kiali.enabled configuration parameter**
@@ -80,4 +111,6 @@ with following command,
     
     # Output
     
-    
+You can also access from console, but need to expose port and then access it.
+
+    istioctl dashboard jaeger

@@ -39,7 +39,7 @@
 **Verify GKE installation**
 
     gcloud container clusters list
-    kubectl get service -n istio-system
+    #kubectl get service -n istio-system
     
 ## Istio Installation on GKE Platform - Getting Started with Demo Profile.
 
@@ -57,6 +57,7 @@
     export PATH=$PWD/bin:$PATH
     ls -al   
     istioctl version
+ 
     
     # Install Istio
     istioctl manifest apply --set profile=demo
@@ -65,6 +66,10 @@
     # Envoy sidecar proxies **when you deploy your application later:**
 
     kubectl label namespace default istio-injection=enabled
+    
+    # Verify install
+    istioctl version
+    istioctl verify-install
     
 **Verify Istio installation**    
 
@@ -121,3 +126,30 @@
     default. The Kiali dashboard shows an overview of your mesh with the relationships 
     between the services in the Bookinfo sample application. It also provides filters 
     to visualize the traffic flow.
+    
+    
+## Accessing dashboard jaeger
+
+    istioctl dashboard jaeger
+    
+## Visualizing Metrics with Grafana
+
+1.Verify that the prometheus service is running in your cluster.
+  In Kubernetes environments, execute the following command:
+  
+    kubectl -n istio-system get svc prometheus
+    
+2.Verify that the Grafana service is running in your cluster.
+
+    kubectl -n istio-system get svc grafana
+    
+3.Open the Istio Dashboard via the Grafana UI.
+  In Kubernetes environments, execute the following command:
+  
+    kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000 &
+
+4.Visit http://localhost:3000/dashboard/db/istio-mesh-dashboard in your web browser.
+
+**Note - If error shows as port already in use, then use different port.**
+Also this is workaround as running by port forwarding, will need to expose port to access 
+from outside.
