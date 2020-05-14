@@ -52,8 +52,27 @@ Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-
 Navigate to the Grafana URL 
 
     for example, http://<Grafana-load-balance-IP>:3000/dashboard/db/istio-mesh-dashboard
-    http://52.150.35.253:3000/dashboard/db/istio-mesh-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
     you should see a page:
+There are different dashboards, for more details pl. visit, 
+https://istio.io/docs/tasks/observability/metrics/using-istio-dashboard/
+
+Services dashboard e.g.
+
+    http://localhost:3000/dashboard/db/istio-service-dashboard 
+    e.g.
+    http://34.71.126.82:3000/dashboard/db/istio-service-dashboard
+
+Visualize Workload Dashboards
+
+    http://localhost:3000/dashboard/db/istio-workload-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard 
+
+Examples, 
+http://34.71.126.82:3000/dashboard/db/istio-service-dashboard
+http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
+http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard   
+        
 
 ## Prometheus - on Istio
 **set the addonComponents.prometheus.enabled configuration parameter**
@@ -124,7 +143,7 @@ Navigate to the Kiali URL
 
 **Jaeger**
 Jaeger is open source, end-to-end distributed tracing.
-**set the addonComponents.kiali.enabled configuration parameter**
+**Need to check - set the addonComponents.trace.enabled configuration parameter**
 with following command,
 
     ## need to check - istioctl manifest apply --set addonComponents.tracing.enabled=true
@@ -133,4 +152,38 @@ with following command,
     
 You can also access from console, but need to expose port and then access it.
 
-    istioctl dashboard jaeger
+    # from console only - istioctl dashboard jaeger
+    
+## Accessing The Jaeger Service
+Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-with-kiali
+
+**Since Jaeger is, by default, an internal service, you can access it in either of two ways:**
+
+**1 - Using port forwarding**
+
+    kubectl -n istio-system port-forward svc/kiali  20001:20001
+    
+**2 - Convert the service to LoadBalancer**
+
+    kubectl patch service jaeger-query --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    
+    # Then get the IP address and port:
+    kubectl -n istio-system get service kiali -o jsonpath='{.status.loadBalancer.ingress[0].ip}
+    kubectl -n istio-system get service kiali -o jsonpath='{.spec.ports[?(@.name=="http-kiali")].port}'    
+
+Or
+    # Run following command and copy external IP address and port
+    
+    kubectl -n istio-system get service jaeger-query
+    
+    E.g.
+    padmakar_kotule@cloudshell:~ (devops-padmakar)$ kubectl -n istio-system get service jaeger-query
+    NAME           TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)           AGE
+    jaeger-query   LoadBalancer   10.19.246.172   104.155.149.65   16686:30092/TCP   9h
+    padmakar_kotule@cloudshell:~ (devops-padmakar)$
+    
+    
+Navigate to the Kiali URL 
+
+    http://104.155.149.65:16686
+    you should see a page:
