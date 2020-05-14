@@ -32,6 +32,29 @@ In general, you can use the --set flag in istioctl as you would with Helm.
 The only difference is you must prefix the setting paths with values. because this 
 is the path to the Helm pass-through API in the IstioOperator API.
 
+## Accessing The Grafana Service (Istio System using Grafana)
+Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-with-kiali
+
+**Since Grafana is, by default, an internal service, you can access it in either of two ways:**
+
+**1 - Using port forwarding**
+
+    kubectl -n istio-system port-forward svc/grafana  30000:3000
+    
+**2 - Convert the service to LoadBalancer**
+
+    kubectl patch service grafana --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+
+    # Then get the IP address and port:
+    kubectl -n istio-system get service grafana -o jsonpath='{.status.loadBalancer.ingress[0].ip}
+    kubectl -n istio-system get service grafana -o jsonpath='{.spec.ports[?(@.name=="http-kiali")].port}'    
+
+Navigate to the Grafana URL 
+
+    for example, http://<Grafana-load-balance-IP>:3000/dashboard/db/istio-mesh-dashboard
+    http://52.150.35.253:3000/dashboard/db/istio-mesh-dashboard
+    you should see a page:
+
 ## Prometheus - on Istio
 **set the addonComponents.prometheus.enabled configuration parameter**
 with following command,
@@ -79,13 +102,13 @@ with following command,
 ## Accessing The Kiali Service
 Ref. Link - https://www.magalix.com/blog/working-with-istio-track-your-services-with-kiali
 
-Since Kiali is, by default, an internal service, you can access it in either of two ways:
+**Since Kiali is, by default, an internal service, you can access it in either of two ways:**
 
-**Using port forwarding**
+**1 - Using port forwarding**
 
     kubectl -n istio-system port-forward svc/kiali  20001:20001
     
-**Convert the service to LoadBalancer**
+**2 - Convert the service to LoadBalancer**
 
     kubectl patch service kiali --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
     
@@ -97,17 +120,14 @@ Navigate to the Kiali URL
 
     for example, http://<Kiali-load-balance-IP>:20001/kiali/
     http://52.150.35.253:20001/kiali/
-    you should see a page similar to the following:
-
-
-
+    you should see a page:
 
 **Jaeger**
 Jaeger is open source, end-to-end distributed tracing.
 **set the addonComponents.kiali.enabled configuration parameter**
 with following command,
 
-    istioctl manifest apply --set addonComponents.kiali.enabled=true
+    ## need to check - istioctl manifest apply --set addonComponents.tracing.enabled=true
     
     # Output
     
