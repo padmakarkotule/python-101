@@ -459,4 +459,6 @@ duplicate HTML code.
 This section show some basic of adding html, css files for backend specific services. 
 E.g. we will add account(login, logout) specific code.
 
+Create separate folder for each service and 
+within service specific folder create separate file for each component.
   

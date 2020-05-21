@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/DjangoDeployment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/DjangoProject" vcs="Git" />
   </component>
 </project>

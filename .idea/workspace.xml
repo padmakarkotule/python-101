@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-478">
-                <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
+              <first_editor relative-caret-position="2652">
+                <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
@@ -30,11 +30,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+              <first_editor relative-caret-position="2244">
+                <caret line="132" column="29" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="29" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1275">
+                <caret line="75" selection-start-line="75" selection-end-line="75" />
               </first_editor>
               <second_editor />
             </state>
@@ -42,11 +54,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
+        <entry file="file://$PROJECT_DIR$/docs/Django_UI/Django_UI.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1904">
-                <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+              <first_editor relative-caret-position="389">
+                <caret line="462" column="71" lean-forward="true" selection-start-line="462" selection-start-column="71" selection-end-line="462" selection-end-column="71" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="5559">
+                <caret line="327" selection-start-line="327" selection-end-line="327" />
               </first_editor>
               <second_editor />
             </state>
@@ -85,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03_3_List_data_type_examples.py" />
-        <option value="$PROJECT_DIR$/template_for_code.py" />
         <option value="$PROJECT_DIR$/03_4_Tuple_examples.py" />
         <option value="$PROJECT_DIR$/04_1_Dictionary_examples.py" />
         <option value="$PROJECT_DIR$/04_2_FileHandling_Examples.py" />
@@ -136,6 +158,8 @@
         <option value="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md" />
+        <option value="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" />
       </list>
     </option>
   </component>
@@ -339,7 +363,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.25655282" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.24305004" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -389,44 +413,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/18 CustomClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/yaml_json/json_python_examples/01_json_load_and_dump_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/sns/using_json_input/generate_html_using_json_and_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/sns/send_mail_sms/SMS/send_sms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-732">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/yaml_json/yaml_python_examples/02_yaml_load_read-convert_yaml_to_json_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/yaml_json/yaml_python_examples/yaml_single_doc.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -636,41 +622,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/GCP_Setup_Requirements_As_per_Qwiklab.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/Qwiklabs/GCP_Setup_Requirements_As_per_Qwiklab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="884">
             <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="4335">
-            <caret line="369" selection-start-line="369" selection-end-line="369" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-478">
-            <caret line="123" column="41" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="41" />
           </first_editor>
           <second_editor />
         </state>
@@ -686,51 +642,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/file_handler_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/views.py" />
+    <entry file="file://$PROJECT_DIR$/docs/istio/File_upload_gcp_and_reservation/myapp/file_handler_service.py" />
     <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/json/networkContent.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2955" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="423">
-            <caret line="249" column="23" lean-forward="true" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="170">
-            <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
       </provider>
     </entry>
     <entry file="file://C:/01-CIS_Practice/Avaya/POC-Code/frontend/UI_Codebase/scripts/d3-instant-charts.js">
@@ -745,11 +664,107 @@
         <state relative-caret-position="-4485" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-2890">
+            <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/GCP_Setup_Requirements_As_per_Qwiklab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="221">
+            <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="6273">
+            <caret line="369" selection-start-line="369" selection-end-line="369" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Ingress_Gateway.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-306" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Overview_and_Architecture.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="2652">
+            <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1904">
-            <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+          <first_editor relative-caret-position="2244">
+            <caret line="132" column="29" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1275">
+            <caret line="75" selection-start-line="75" selection-end-line="75" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="5559">
+            <caret line="327" selection-start-line="327" selection-end-line="327" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Django_UI/Django_UI.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="389">
+            <caret line="462" column="71" lean-forward="true" selection-start-line="462" selection-start-column="71" selection-end-line="462" selection-end-column="71" />
           </first_editor>
           <second_editor />
         </state>
