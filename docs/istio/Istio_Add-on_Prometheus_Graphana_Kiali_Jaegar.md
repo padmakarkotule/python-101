@@ -183,7 +183,6 @@ Or
     padmakar_kotule@cloudshell:~ (devops-padmakar)$
     
     
-Navigate to the Kiali URL 
-
+Navigate to the Jaeger URL 
     http://104.155.149.65:16686
     you should see a page:

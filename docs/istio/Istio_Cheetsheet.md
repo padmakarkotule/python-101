@@ -11,7 +11,7 @@
     export GCLOUD_PROJECT=$(gcloud config get-value project)
     
     # Kubernetes cluster basic details
-    export CLUSTER_NAME=central
+    export CLUSTER_NAME=democluster
     export CLUSTER_ZONE=us-central1-b
     export CLUSTER_VERSION=latest
     
@@ -116,7 +116,87 @@
     
     # Verify external access #Access url from browser
     http://$GATEWAY_URL/productpage
+
+# View Dashboard with Prometheus, Graphana, Kiali, Jaeger
+**Since Prometheus, Graphana, Kiali and Jaeger by default running as an internal services,
+ you can access it in either of two ways:**
+**1 - Using port forwarding**  Or **2 - Convert the service to LoadBalancer**
+**Note - Here we are exposing Prometheus, Graphana, Kiali and Jaeger using 
+with LoadBalancer.**
+
+- Prometheus - http://<External IP e.g. 34.71.126.82>:9090/
+- Graphana - http://<External IP e.g. 34.71.126.82>:3000/
+    http://34.71.126.82:3000/dashboard/db/istio-service-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard
+- Kiali - http://<External IP e.g. 34.71.126.82>:20001/kiali/
+- Jaeger - http://<External IP e.g. 34.71.126.82>:16686/
+
+**Prometheus**
+    **set the addonComponents.prometheus.enabled configuration parameter**
+with following command,
+
+    # Enable addon component Prometheus and access using web.
+    istioctl manifest apply --set addonComponents.prometheus.enabled=true    
+    kubectl patch service prometheus --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    # Access prometheus example, http://<Prometheus-load-balance-IP>:3
+    http://34.71.126.82:9090
     
+   
+**Graphana**
+    **set the addonComponents.prometheus.enabled configuration parameter**
+with following command,
+
+    # Enable addon component Graphana and access using web.
+    istioctl manifest apply --set addonComponents.grafana.enabled=true    
+    kubectl patch service grafana --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+
+Navigate to the Grafana URL
+istio-mesh-dashboard
+    # example, http://<Grafana-load-balance-IP>:3000/dashboard/db/istio-mesh-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
+    # There are different dashboards, for more details pl. visit, 
+    # https://istio.io/docs/tasks/observability/metrics/using-istio-dashboard/
+
+Services dashboard e.g.
+    http://localhost:3000/dashboard/db/istio-service-dashboard 
+    e.g.
+    http://34.71.126.82:3000/dashboard/db/istio-service-dashboard
+
+Visualize Workload Dashboards
+    http://localhost:3000/dashboard/db/istio-workload-dashboard
+    http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard 
+Examples,
+http://34.71.126.82:3000/dashboard/db/istio-service-dashboard
+http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
+http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard
+
+**Kiali**
+    **set the addonComponents.prometheus.enabled configuration parameter**
+with following command,
+
+    # Enable addon component Kiali and access it using web.
+    istioctl manifest apply --set addonComponents.kiali.enabled=true    
+    kubectl patch service kiali --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+
+Navigate to the Kiali URL 
+    for example, http://<Kiali-load-balance-IP>:20001/kiali/
+    http://52.150.35.253:20001/kiali/
+
+**Jaeger**
+    **set the addonComponents.prometheus.enabled configuration parameter**
+with following command,
+
+    # First enable tracing if not already or check it. 
+    istioctl manifest apply --set addonComponents.tracing.enabled=true
+    # Enable addon component Jaeger-query and access using web.
+    istioctl manifest apply --set addonComponents.jaeger-query.enabled=true    
+    kubectl patch service jaeger-query --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    
+Navigate to the Jaeger URL 
+    http://104.155.149.65:16686   
+
+#######==============Old Output ===============#######
 ##  View the dashboard Kiali, Prometheus, Graphaha, Jaeger    
     
     # Access the Kiali dashboard.
