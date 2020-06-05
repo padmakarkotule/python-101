@@ -135,21 +135,30 @@ with LoadBalancer.**
 **Prometheus**
     **set the addonComponents.prometheus.enabled configuration parameter**
 with following command,
+**Note - If you used demo profile then --set addon command not needed
+As its already configured by demo profile.**
 
     # Enable addon component Prometheus and access using web.
-    istioctl manifest apply --set addonComponents.prometheus.enabled=true    
+    # istioctl manifest apply --set addonComponents.prometheus.enabled=true    
     kubectl patch service prometheus --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+    
+    # Get the external IP address where prometheus is running and exposed outside.
+    **kubectl -n istio-system get svc prometheus**
     # Access prometheus example, http://<Prometheus-load-balance-IP>:3
-    http://34.71.126.82:9090
+    http://34.71.126.82:9090/
     
    
-**Graphana**
-    **set the addonComponents.prometheus.enabled configuration parameter**
+**Grafana**
+    **set the addonComponents.grafana.enabled configuration parameter**
 with following command,
 
     # Enable addon component Graphana and access using web.
     istioctl manifest apply --set addonComponents.grafana.enabled=true    
     kubectl patch service grafana --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
+
+    # Get the external IP address where prometheus is running and exposed outside.
+    **kubectl -n istio-system get svc grafana**
+
 
 Navigate to the Grafana URL
 istio-mesh-dashboard
@@ -172,19 +181,21 @@ http://34.71.126.82:3000/dashboard/db/istio-mesh-dashboard
 http://34.71.126.82:3000/dashboard/db/istio-workload-dashboard
 
 **Kiali**
-    **set the addonComponents.prometheus.enabled configuration parameter**
+    **set the addonComponents.kiali.enabled configuration parameter**
 with following command,
 
     # Enable addon component Kiali and access it using web.
     istioctl manifest apply --set addonComponents.kiali.enabled=true    
     kubectl patch service kiali --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
 
+    # Get the external IP address where prometheus is running and exposed outside.
+    **kubectl -n istio-system get svc kiali**
 Navigate to the Kiali URL 
     for example, http://<Kiali-load-balance-IP>:20001/kiali/
     http://52.150.35.253:20001/kiali/
 
 **Jaeger**
-    **set the addonComponents.prometheus.enabled configuration parameter**
+    **set the addonComponents.tracing.enabled configuration parameter**
 with following command,
 
     # First enable tracing if not already or check it. 
@@ -192,7 +203,7 @@ with following command,
     # Enable addon component Jaeger-query and access using web.
     istioctl manifest apply --set addonComponents.jaeger-query.enabled=true    
     kubectl patch service jaeger-query --patch '{"spec":{"type":"LoadBalancer"}}' -n istio-system
-    
+    kubectl -n istio-system get svc Jaeger-query    
 Navigate to the Jaeger URL 
     http://104.155.149.65:16686   
 

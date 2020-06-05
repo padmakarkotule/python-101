@@ -167,7 +167,7 @@ The installation directory contains:
 have a good set of defaults for testing, but there are other profiles for 
 production or performance testing.
 
-    istioctl manifest apply --set profile=demo
+        istioctl manifest apply --set profile=demo
     
     # Output
     
