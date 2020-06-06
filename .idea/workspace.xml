@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_istio_download_install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_gcloud_container_clusters_get-credentials.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_istio_inject_sidecar.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_istio.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_k8s_and_bind_clusterrole_cluster_admin.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/04_istio_enable_addon.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_create_Kiali_secrets.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_expose_port_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/06_istio_deploy_sample_application.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/07_istio_configure_ingress_gateway.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/08_verify_visualation_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="2652">
+              <first_editor relative-caret-position="607">
                 <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
               </first_editor>
               <second_editor />
@@ -33,20 +45,8 @@
         <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2244">
-                <caret line="132" column="29" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="29" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1275">
-                <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <first_editor relative-caret-position="100">
+                <caret line="230" column="46" lean-forward="true" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
               </first_editor>
               <second_editor />
             </state>
@@ -54,25 +54,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/Django_UI/Django_UI.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="389">
-                <caret line="462" column="71" lean-forward="true" selection-start-line="462" selection-start-column="71" selection-end-line="462" selection-end-column="71" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5559">
-                <caret line="327" selection-start-line="327" selection-end-line="327" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -109,23 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03_4_Tuple_examples.py" />
-        <option value="$PROJECT_DIR$/04_1_Dictionary_examples.py" />
-        <option value="$PROJECT_DIR$/04_2_FileHandling_Examples.py" />
-        <option value="$PROJECT_DIR$/03_5_Set_examples.py" />
-        <option value="$PROJECT_DIR$/06_1_Scopes_Local_Global_NonLocal.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/yaml_example.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/swagger_yaml.example.yml" />
-        <option value="$PROJECT_DIR$/python_yaml_json/yml_load_example.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/convert_yaml_to_json.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/repeat.yaml" />
-        <option value="$PROJECT_DIR$/python_yaml_json/repeat_code_example.yaml" />
-        <option value="$PROJECT_DIR$/python_yaml_json/repeat_code_example_single_doc.yaml" />
-        <option value="$PROJECT_DIR$/python_yaml_json/convert_yaml_to_json_single_doc.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/01_yaml_general_example.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/01_yml_general_example.yaml" />
-        <option value="$PROJECT_DIR$/python_yaml_json/02_yml_repeat_code_example_yaml_to_json_single_doc.py" />
-        <option value="$PROJECT_DIR$/python_yaml_json/02_yml_repeat_code_example_single_doc.yaml" />
         <option value="$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_multi_doc_in_singlefile.yaml" />
         <option value="$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_yaml_to_json_multi_doc_in_singlefile.py" />
         <option value="$PROJECT_DIR$/python_yaml_json/01_yaml_load_convert_json_example.yaml" />
@@ -156,14 +124,31 @@
         <option value="$PROJECT_DIR$/docs/gunicorn_nginx/Dockerfile" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md" />
+        <option value="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" />
+        <option value="$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md" />
+        <option value="$USER_HOME$/Downloads/kubernetics_install.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md" />
         <option value="$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md" />
-        <option value="$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md" />
-        <option value="$PROJECT_DIR$/docs/Django_UI/Django_UI.md" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_gcloud_container_clusters_get-credentials.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_k8s_and_bind_clusterrole_cluster_admin.sh" />
+        <option value="$USER_HOME$/Downloads/kubernetics_install(1).sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/gke_k8s.conf" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_istio_download.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_istio_inject_sidecar.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_prometheus_grafana_kiali_jaeger.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_istio.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_expose_port_prometheus_grafana_kiali_jaeger.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/04_istio_enable_addon.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/06_istio_deploy_sample_application.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/07_istio_configure_ingress_gateway.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_create_Kiali_secrets.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/08_verify_visualation_prometheus_grafana_kiali_jaeger.sh" />
+        <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
@@ -192,6 +177,13 @@
               <item name="python-101" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="istio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-101" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="istio" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts_istio_installation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,7 +355,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.2494043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987013" visible="true" weight="0.30579826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012987" side_tool="true" weight="0.24305004" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,121 +405,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/yaml_json/yaml_python_examples/yaml_single_doc.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/yaml_json/yaml_python_examples/01_yaml_general_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/container_docker/Container_kernel_highlevel_view.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/.docker/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/container_docker/Overlay_fs_union_fs_in_docker.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/roles/httpd/handlers/main.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/roles/httpd/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/docs/markdown_readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/extra_var.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/Pattern2_PaaS_CentOS_7.x.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/Pattern1_IaaS_CentOS_7.x.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/deploy_ansible_example.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ansible/ansible_docs_leanring_padmakar/docs/automation_readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="6664">
-            <caret line="437" column="34" lean-forward="true" selection-start-line="437" selection-start-column="34" selection-end-line="437" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/container_docker/container.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="193">
-            <caret line="480" column="41" selection-start-line="480" selection-start-column="41" selection-end-line="480" selection-end-column="41" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/celery/celery.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="119">
-            <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#21#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_app1_another_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_wsgi_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/markdown_mkdocs_/markdown_readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -664,16 +541,6 @@
         <state relative-caret-position="-4485" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Add_On.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -689,16 +556,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="221">
             <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="6273">
-            <caret line="369" selection-start-line="369" selection-end-line="369" />
           </first_editor>
           <second_editor />
         </state>
@@ -720,41 +577,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2652">
-            <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
+    <entry file="file://$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2244">
-            <caret line="132" column="29" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1275">
-            <caret line="75" selection-start-line="75" selection-end-line="75" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5559">
-            <caret line="327" selection-start-line="327" selection-end-line="327" />
+          <first_editor relative-caret-position="34">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
           </first_editor>
           <second_editor />
         </state>
@@ -763,10 +590,189 @@
     <entry file="file://$PROJECT_DIR$/docs/Django_UI/Django_UI.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="389">
-            <caret line="462" column="71" lean-forward="true" selection-start-line="462" selection-start-column="71" selection-end-line="462" selection-end-column="71" />
+          <first_editor relative-caret-position="117">
+            <caret line="422" column="33" selection-start-line="422" selection-start-column="33" selection-end-line="422" selection-end-column="33" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="607">
+            <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/kubernetics_install.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Deploy_Sample_Multi_service_app_Bookinfo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/gke_istio.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Installation_GKE_Platform_GettingStarted_DemoProfile.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_gcloud_container_clusters_get-credentials.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_k8s_and_bind_clusterrole_cluster_admin.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/gke_k8s.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_istio_inject_sidecar.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/kubernetics_install(1).sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="76" column="51" lean-forward="true" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_istio_download_install.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_istio.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_prometheus_grafana_kiali_jaeger.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/04_istio_enable_addon.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_expose_port_prometheus_grafana_kiali_jaeger.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="100" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/07_istio_configure_ingress_gateway.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/06_istio_deploy_sample_application.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_create_Kiali_secrets.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Add-on_Prometheus_Graphana_Kiali_Jaegar.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="437">
+            <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/08_verify_visualation_prometheus_grafana_kiali_jaeger.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="100">
+            <caret line="230" column="46" lean-forward="true" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
         </state>
       </provider>
     </entry>
