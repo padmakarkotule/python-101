@@ -35,7 +35,7 @@ echo "Cluster details are : name ${CLUSTER_NAME}, zone:${CLUSTER_ZONE}, version:
 # use the --enable-autoscaling flag and specify --min-nodes and --max-nodes
 echo "Creating K8s cluster..."
 gcloud container clusters create $CLUSTER_NAME \
-       --cluster-version $CLUSTER_VERSION \
+       --cluster-version $CLUSTER_VERSION --enable-autoscaling \
        --machine-type $machine_type \
        --num-nodes $num_nodes --min-nodes $min_nodes --max-nodes $max_nodes \
        --image-type "COS" --zone $CLUSTER_ZONE  \
