@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <main>
+      <!--#include virtual="../includes/header.html" -->
+      <div class="alert hidden" id="alertMessage" role="alert">
+        <span class="content"></span>
+        <button type="button" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <section class="vCenter-section">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </section>
+      <section id="networkSection">
+        <h2>Available Network</h2>
+        <div
+          class="panel-group"
+          id="accordion"
+          role="tablist"
+          aria-multiselectable="true"
+        ></div>
+      </section>
+      <!--#include virtual="../includes/footer.html" -->
+    </main>
+  </body>
+</html>
