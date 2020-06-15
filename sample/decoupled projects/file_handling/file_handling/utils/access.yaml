@@ -1,0 +1,49 @@
+---
+Organisation: GS Lab
+Departments:
+  CorpsServices:
+  - HR:
+    - Projects:
+      - Project1
+      - Project2
+  - Finance:
+    - Projects:
+      - Project1
+      - Project2
+  - Facility:
+    - Projects:
+      - Project1
+      - Project2
+  CIS:
+  - Team1:
+    - Projects:
+      - Project1
+      - Project2
+  - Team2:
+    - Projects:
+      - Project1
+      - Project2
+  - Team3:
+    - Projects:
+      - Project1
+      - Project2
+Roles:
+  - RoleName: User
+    Id: 1
+    _type: User account
+    Description: Default role for all users on all services to get read operations.
+
+  - RoleName: Infoblox.Admin
+    Id: 2
+    _type: User account
+    Description: Adminf role for to do all operations on service infoblox.
+
+  - RoleName: infoblox.serviceAccountUser
+    Id: 3
+    _type: Service account
+    Description: Service account used to connect infoblox server.
+
+  - RoleName: vCenter.serviceAccountUser
+    Id: 4
+    _type: Service account
+    Description: Service account used to connect vCenter server.

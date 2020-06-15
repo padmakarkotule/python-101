@@ -1,0 +1,28 @@
+---
+DEFAULT:
+  LogFilePath: "logs.log"
+  LogLevel: "INFO"
+  SettingsDebugFlag: "False"
+MONGO:
+  ServerIP: "localhost"
+  ServerPort: "27017"
+  Database: "test"
+  RolesCollection: "roles"
+  UserCollection: "users"
+  ProjectsCollection: "projects"
+  ReservedIPCollection: "reserved_ips"
+  AuditLogCollection: "audit_logs"
+  FileUploadCollection: "file_upload"
+INFOBLOX:
+  InfobloxURL: "https://192.168.42.170/wapi/v2.7.1"
+  InfobloxUsername: "admin"
+  InfobloxPassword: "infoblox"
+ROLES:
+  AdminRoles:
+    - "Manager"
+    - "Infoblox Admin"
+  UserRoles:
+    - "User"
+GCP:
+  GoogleCreds: "utils/devops-padmakar-53c8fd3836c1.json"
+  BucketId: "test_789_gcp_bucket"
