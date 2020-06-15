@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="965cad61-635f-4955-8b3e-fbdfd72392ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_istio_download_install.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_gcloud_container_clusters_get-credentials.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/02_istio_inject_sidecar.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_istio.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_k8s_and_bind_clusterrole_cluster_admin.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/03_verify_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/04_istio_enable_addon.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_create_Kiali_secrets.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_expose_port_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/06_istio_deploy_sample_application.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/07_istio_configure_ingress_gateway.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/08_verify_visualation_prometheus_grafana_kiali_jaeger.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Django_Deployment/Django_deployment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/Jenkins.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/Jenkins.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +31,41 @@
         <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="100">
-                <caret line="230" column="46" lean-forward="true" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
+              <first_editor relative-caret-position="3910">
+                <caret line="230" column="46" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/DevOps.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh">
+        <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/Jenkins.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="440">
+                <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/JenkinsFile_sample.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+            <state relative-caret-position="-391">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -94,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_multi_doc_in_singlefile.yaml" />
         <option value="$PROJECT_DIR$/python_yaml_json/03_yml_repeat_code_example_yaml_to_json_multi_doc_in_singlefile.py" />
         <option value="$PROJECT_DIR$/python_yaml_json/01_yaml_load_convert_json_example.yaml" />
         <option value="$PROJECT_DIR$/python_yaml_json/01_yaml_load_convert_json_example.py" />
@@ -145,6 +152,7 @@
         <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/05_istio_create_Kiali_secrets.sh" />
         <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/08_verify_visualation_prometheus_grafana_kiali_jaeger.sh" />
         <option value="$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh" />
+        <option value="$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/Jenkins.md" />
       </list>
     </option>
   </component>
@@ -176,14 +184,13 @@
               <item name="python-101" type="b2602c69:ProjectViewProjectNode" />
               <item name="python-101" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="istio" type="462c0819:PsiDirectoryNode" />
+              <item name="CI_CD_DevOps_Jenkins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python-101" type="b2602c69:ProjectViewProjectNode" />
               <item name="python-101" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="istio" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts_istio_installation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,24 +412,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/markdown_mkdocs_/markdown_readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="80">
-            <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gunicorn/util.py" />
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_gunicorn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/web_application_with_waitress.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -597,16 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="607">
-            <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/kubernetics_install.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -759,20 +738,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
+    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/gunicorn_nginx/gunicorn_nginx.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="100">
-            <caret line="230" column="46" lean-forward="true" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="607">
+            <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/istio/scripts_istio_installation/01_kubernetes_cluster_create.sh">
+    <entry file="file://$PROJECT_DIR$/docs/istio/Istio_Cheetsheet.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3910">
+            <caret line="230" column="46" selection-start-line="230" selection-start-column="46" selection-end-line="230" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/JenkinsFile_sample.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+        <state relative-caret-position="-391">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/DevOps.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/CI_CD_DevOps_Jenkins/Jenkins.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="440">
+            <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
