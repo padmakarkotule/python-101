@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign up{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/iam.css' %}">
+{% endblock head %}
+
+{% block content%}
+        <div class="col-sm-5 col-md-offset-4" style="background: white;position: static;margin-top:49px;">
+        <br>
+            <div class="panel panel-success" style="">
+        <div class="panel-heading">
+            <h3 class="">Add record</h3>
+        </div>
+        <br>
+            <div class="panel-body">
+        <form class="md-form" id="add_catalog" method="post" action="/fbapi/new/">
+            {% csrf_token %}
+            <label class="labelpadding">Full Name</label>
+                        <input type="text" name="username" id="name" placeholder="username" required class="form-control field"/><br>
+                        <input type="text" name="id" id="id" placeholder="id" required class="form-control field"/><br>
+                        <label class="labelpadding">contact</label>
+                        <input type="text" name="contact" id="contact" placeholder="contact" required class="form-control field"/><br>
+                        <label class="labelpadding">email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required class="form-control field"/><br>
+            <input type="submit" class="btn btn-primary" onclick="add_catalog()">
+        </form>
+            </div>
+        <div class="panel-footer">
+                <h5 style="padding-left:5%">REST API - Example </h5>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Including footer html which will be used across the Project.-->
+
+
+
+{% endblock content %}
+    <footer>
+        <!-- Including footer html which will be used across the Project.-->
+        {% block footer %}
+        {% endblock footer %}
+    </footer>

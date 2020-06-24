@@ -1,0 +1,30 @@
+# Set the base image to nginx. Use an official Nginx image. (Here used base image nginx:latest version).
+FROM nginx:latest
+
+# File Author / Maintainer
+MAINTAINER Padmakar Kotule
+
+# Set variables for project name,
+# E.g. Django project name is projectx then set as, ENV PROJECT=projectx
+ENV PROJECT=ui_service
+
+# set where to place files in container. e.g. ENV CONTAINER_HOME=/opt or ENV CONTAINER_HOME=/app
+ENV CONTAINER_HOME=/opt
+
+# Set Container project
+ENV CONTAINER_PROJECT=$CONTAINER_HOME/$PROJECT
+
+# Set webapp (e.g. Django's app folder where app has tested) and Copy static files
+ENV STATIC_FILES=$CONTAINER_HOME/$PROJECT/ui/static
+COPY ./static $STATIC_FILES
+
+# Remove default nginx config file.
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy djangoproject.conf /etc/nginx/conf.d/
+COPY ./gcloud_uiservice.conf /etc/nginx/conf.d/
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+

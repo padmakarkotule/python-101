@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>{% block title %}GS Cloud{% endblock title %}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <!-- component home
+
+        <link href="../css/homeorg.css" rel="stylesheet" />
+        <a href="../pages/Home.html" style="color: #fff;">Home</a>
+        <script src="../scripts/home.js"></script>
+         -->
+           <!-- <link href="/css/main.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reporting.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!--<link href="/css/login.css" rel="stylesheet" /> -->
+        <!--<link href="/css/home.css" rel="stylesheet" />
+        <link href="/css/dashboard.css" rel="stylesheet" />
+        <link href="/css/reporting.css" rel="stylesheet" /> <!-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/dashboard.js"></script>
+        <script src="/static/js/home.js"></script>
+        <script src="/static/js/reporting.js"></script>
+        {% load static %}
+        {% block head %}
+        {% endblock head %}
+    </head>
+
+    <header>
+        <!-- Including header html which will be used across the Project.-->
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock header %}
+    </header>
+
+    <body>
+        {% block content %}
+        {% endblock content %}
+    </body>
+
+    <footer>
+        <!-- Including footer html which will be used across the Project.-->
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock footer %}
+    </footer>
+</html>

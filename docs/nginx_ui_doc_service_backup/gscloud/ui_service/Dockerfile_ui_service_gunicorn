@@ -1,0 +1,57 @@
+# Set the base image to Python. Use an official Python image. (Here used base image python:3.7.4-alpine).
+FROM python:3.7.4-alpine
+
+# File Author / Maintainer
+MAINTAINER Padmakar Kotule
+
+# Set variables for project name,
+# E.g. Django project name is projectx then set as, ENV PROJECT=projectx
+ENV PROJECT=ui_service
+
+# set where to place files in container. e.g. ENV CONTAINER_HOME=/opt or ENV CONTAINER_HOME=/app
+ENV CONTAINER_HOME=/opt
+
+# Set Container project
+ENV CONTAINER_PROJECT=$CONTAINER_HOME/$PROJECT
+
+# Set the working directory E.g. you can set as /app or /opt etc.
+# WORKDIR /app or WORKDIR=/opt
+WORKDIR $CONTAINER_HOME
+
+# Copy application source code to $CONTAINER_PROJECT
+# E.g. COPY . $CONTAINER_PROJECT
+# In following line copy project from git or other source. E.g. git clone "https://<git-path>"
+# then copy source project to $CONTAINER_PROJECT
+COPY ./openstack $CONTAINER_PROJECT
+#COPY ./openstack $CONTAINER_HOME
+
+# Create application subdirectories e.g. for to keep log files create dir logs
+RUN mkdir $CONTAINER_HOME/logs
+
+# Verify directories and path e.g.
+RUN echo $CONTAINER_PROJECT
+RUN ls -al $CONTAINER_PROJECT
+
+# Install Python dependencies
+# E.g. RUN pip install -r /ui_service/requirement.txt && pip install gunicorn==20.0.4
+RUN pip install -r $CONTAINER_PROJECT/requirements.txt
+
+# Install gunicorn version 20.0.4. You can replace latest version as per new availability.
+RUN pip install gunicorn==20.0.4
+
+# Make port 8081 available to the world outside this container
+EXPOSE 8086
+
+# Copy and set entrypoint. Add commoands in entrypoint.sh file and copy that files to folder and run commands.
+WORKDIR $CONTAINER_PROJECT
+COPY ./entrypoint_ui_service_gunicorn.sh /entrypoint.sh
+# Give executable permission to entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Run the application when container launches.
+# E.g. CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8005"]
+# E.g. CMD ["/bin/sh", "/entrypoint.sh"]
+# Or
+# Run CMDs using entrypoint.sh instead of using CMD command option in Dockerfile.
+# E.g. ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

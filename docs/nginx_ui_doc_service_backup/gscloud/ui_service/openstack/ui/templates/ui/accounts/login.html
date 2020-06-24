@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Add User Record{% endblock title %}
+
+{% block content%}
+<div class="container">
+        <div class="col-sm-5 col-md-offset-4" style="background: white;position: static;margin-top:49px;">
+        <br>
+            <div class="panel panel-success" style="">
+        <div class="panel-heading">
+            <h3 class="">Add record</h3>
+        </div>
+        <br>
+            <div class="panel-body">
+        <form class="md-form" method="post" action="/fbapi_uf/new/" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.username.label_tag }}<br> {{ form.username }}<br>
+            {{ form.password.label_tag }}<br> {{ form.password }}<br>
+            <input type="submit" value="Submit Query" class="btn btn-primary" onclick="add_catalog()">
+        </form>
+            </div>
+        <div class="panel-footer">
+                <h5 style="padding-left:5%">GS Lab Cloud - Login </h5>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- Including footer html which will be used across the Project.-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock content %}

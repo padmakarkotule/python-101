@@ -1,0 +1,95 @@
+.overlayContainer {
+  position: relative;
+}
+
+.cardImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #2eca6a;
+}
+
+.overlayContainer:hover .overlay {
+  opacity: 0.9;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 30%;
+  left: 39%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.card-box-d:hover .title-d,
+.card-box-d:hover .content-d,
+.card-box-d:hover .info-agents,
+.card-box-d:hover .card-footer-d {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.card-box-d .title-d {
+  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.link-two {
+  color: #000000;
+  transition: all 0.5s ease;
+}
+.card-box-d .card-body-d p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+.card-box-d .card-footer-d {
+  transition: 0.5s ease-in-out;
+  transform: translateY(40px);
+  opacity: 0;
+  position: relative;
+  top: 120px;
+  text-align: center;
+  left: 37px;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.card-box-d .list-inline-item:not(:last-child) {
+  margin-right: 25px;
+}
+.color-a {
+  color: #000000;
+}
+.card-box-d .info-agents {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.color-text-a {
+  color: #555555;
+}
+.card-box-d .card-overlay-hover {
+  transition: all 0.2s ease-in-out;
+}
+.card-box-d .content-d {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transform: translateY(-40px);
+}

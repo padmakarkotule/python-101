@@ -1,0 +1,103 @@
+/*Dashboard Page Style Start*/
+#networkSection {
+  border: solid 1px #dbdbdb;
+  border-radius: 5px;
+  margin: 40px 40px 100px 40px;
+  padding: 20px 40px 20px 40px;
+}
+#networkSection h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.panel-group .panel {
+  margin-bottom: 20px;
+}
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #4f78a4;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default > .panel-heading a {
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+}
+
+.panel-default > .panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform 0.25s linear;
+  -webkit-transition: -webkit-transform 0.25s linear;
+}
+
+.panel-default > .panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default > .panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.panel-group .panel .panel-body {
+  padding: 30px 0 30px 35px;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 15px 0;
+  cursor: pointer;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px 0 0;
+}
+.btn-wrapper button {
+  width: 110px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  background-color: #0175e4;
+  color: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
+  border: none;
+  outline: none;
+}
+.alert {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  z-index: 99;
+  background-color: #5bc55d;
+  color: #fff;
+}
+.alert .close {
+  color: #fff;
+  opacity: 99;
+}
+/*Dashboard Page Style Ends*/

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}REST API - Example{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+
+{% block content%}
+    <h1>REST - Fbapi (List/GET data).</h1>
+  <table>
+        <tr>
+            <td> {{ data }} </td>
+        </tr>
+        <tr>
+            <td> {{ data.0 }} </td>
+        </tr>
+        <tr>
+            <td> {{ data.1 }} </td>
+        </tr>
+        <tr>
+            <td> {{ data.2 }} </td>
+        </tr>
+      <tr>
+            <td> {{ data.3 }} </td>
+        </tr>
+      <tr>
+            <td> ID = {{  data.0.id  }} </td>
+      </tr>
+      <tr>
+            <td> Username = {{  data.0.username  }} </td>
+      </tr>
+      <tr>
+            <td> Email = {{ data.0.email  }} </td>
+      </tr>
+      <tr>
+            <td> Phone number = {{ data.0.contact  }} </td>
+      </tr>
+ <hr>
+        <tr>
+            <td> {{ data.fname }} </td>
+        </tr>
+        <tr>
+            <td> {{ data.lname }} </td>
+        </tr>
+        <tr>
+            <td> {{ data.gid }} </td>
+        </tr>
+      <tr>
+            <td> {{ data.token  }} </td>
+        </tr>
+      <tr>
+            <td> {{ data.profile_image  }} </td>
+       </tr>
+  </table>
+<hr>
+<div class="table-responsive">
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+              <tbody>
+                 {% for d in data %}
+                            <tr>
+                                <td>{{ d.id }} </td>
+                                <td> {{ d.username }}</td>
+                                <td> {{ d.email }}</td>
+                                <td> {{ d.contact }}</td>
+                            </tr>
+                    {% empty %}
+                        Nothing found
+                 {% endfor %}
+              </tbody>
+    </table>
+</div>
+</div>
+<hr>
+<div>
+{% for d in data %}
+    {{ d.id}}<br>
+    {{ d.username}}<br>
+    {{ d.email}}<br>
+    {{ d.contact}}<br>
+{% empty %}
+    Nothing found
+{% endfor %}
+</div>
+{% endblock content %}

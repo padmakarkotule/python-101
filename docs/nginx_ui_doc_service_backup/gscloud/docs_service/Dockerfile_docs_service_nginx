@@ -1,0 +1,26 @@
+# Set the base image to nginx. Use an official Nginx image. (Here used base image nginx:latest version).
+FROM nginx:latest
+
+# File Author / Maintainer
+MAINTAINER Padmakar Kotule
+
+# Set variables for project name,
+# E.g. Django project name is projectx then set as, ENV PROJECT=projectx
+ENV PROJECT=docs_service
+
+# set where to place files in container. e.g. ENV CONTAINER_HOME=/opt or ENV CONTAINER_HOME=/app
+ENV CONTAINER_HOME=/usr/share/nginx/html
+
+# Remove default nginx config file.
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy docs_service.conf /etc/nginx/conf.d/
+COPY ./docs_service.conf /etc/nginx/conf.d/
+
+# Copy djangoproject.conf /etc/nginx/conf.d/
+COPY ./gs_docs $CONTAINER_HOME
+
+# Make port 8085 available to the world outside this container
+EXPOSE 8085
+
+

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Add Rescord{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/iam.css' %}">
+{% endblock head %}
+
+{% block content%}
+        <div class="col-sm-5 col-md-offset-4" style="background: white;position: static;margin-top:49px;">
+        <br>
+            <div class="panel panel-success" style="">
+        <div class="panel-heading">
+            <h3 class="">Add record</h3>
+        </div>
+        <br>
+            <div class="panel-body">
+        <form class="md-form" method="post" action="/fbapi_uf/new/">
+            {% csrf_token %}
+            {{ form.username.label_tag }}<br> {{ form.username }}<br>
+            {{ form.contact.label_tag }} <br> {{ form.contact }}<br>
+            {{ form.email.label_tag }}<br> {{ form.email }}<br>
+            {{ form.date.label_tag }} {{ form.date }}<br>
+            {{ form.time.label_tag }} {{ form.time }}<br>
+            <label class="labelpadding"> Upload Resume: </label><br>
+            <input type="file" name="resume" class = "fileupload" style="size:60;margin-left: 50px;"><br>
+            <input type="submit" value="Submit Query" class="btn btn-primary" onclick="add_catalog()">
+        </form>
+            </div>
+        <div class="panel-footer">
+                <h5 style="padding-left:5%">REST API - Example </h5>
+        </div>
+    </div>
+</div>
+
+
+<!-- Including footer html which will be used across the Project.-->
+
+
+
+{% endblock content %}
+    <footer>
+        <!-- Including footer html which will be used across the Project.-->
+        {% block footer %}
+        {% endblock footer %}
+    </footer>

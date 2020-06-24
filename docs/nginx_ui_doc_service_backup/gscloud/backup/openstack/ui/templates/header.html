@@ -1,0 +1,91 @@
+{% load static %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GS Cloud</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+<!--    <li class="logo"><img src="static/images/gslab_logo.jpg" alt="" width="100" height="40"/></li> -->
+        <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+      {% if request.session.jwt_token %}
+            <li class="active"><a href="{% url 'enquiry' %}">Enquiry </a></li>
+      {% endif %}
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/">Compute <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/homepagetest">VM Large - 16GiB 8 vCPU</a></li>
+            <li><a href="#">VM Medium - 8GiB 4 vCPU</a></li>
+            <li><a href="#">VM Small - 4GiB 2 vCPU</a></li>
+          </ul>
+        </li>
+
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/">Storage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">SSD Storage</a></li>
+            <li><a href="#">HDD Storage</a></li>
+            <li><a href="#">Bucket Storage</a></li>
+            <li><a href="#">Block Storage</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/">Solution<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fbapi/new/">Kubernetes</a></li>
+            <li><a href="/fbapi_uf/new/">Service Mesh</a></li>
+            <li><a href="/fbapi/list/">Docker Registry</a></li>
+            <li><a href="/fbapi_uf/list/">Terraform</a></li>
+            <li><a href="/fbapi/update/">Ansible AWX</a></li>
+            <li><a href="fbapi/delete/">Ansible Tower</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      {% if not request.session.jwt_token %}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/docs/"><span class="glyphicon glyphicon-file"></span> Documentation</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="https://gslab-demoapp.atlassian.net/servicedesk/customer/portal/1"><span class="glyphicon glyphicon-question-sign">Service Desk</span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/servicedesk/">Service Desk</a></li>
+                  </ul>
+            </li>
+          </ul>
+      {% endif %}
+
+      {% if request.session.jwt_token %}
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/"><span class="glyphicon glyphicon-question-sign">Help Desk</span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/profile/">Help</a></li>
+                    <li><a href="/">Terms & Condition</a></li>
+                  </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/"><img src="{% static request.session.profile_image %}" class="img-circle" width="20" height="20">{{ request.session.uid }}</span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/profile/">Your Profile</a></li>
+                    <li><a href="/logout/">Log Out</a></li>
+                  </ul>
+            </li>
+          </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>
